@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#003366" />
+  <title>Life First Healthcare - Quality Home Healthcare, Delivered to Your Doorstep</title>
+  <meta name="description" content="Life First Healthcare provides premium home healthcare services — elder care, nursing, physiotherapy, ICU at home, lab tests & more. 24/7 care with verified professionals." />
+  <meta name="keywords" content="home healthcare, elder care, nursing care, physiotherapy at home, ICU at home, lab tests, medical equipment, dental care, nutrition, Life First Healthcare" />
+
+  <!-- Fonts (Plus Jakarta Sans + DM Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./assets/images/logo.png" />
+</head>
+<body>
+
+  <!-- ===================== TOP BAR ===================== -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <div class="top-bar-item">
+          <i class="fas fa-location-dot"></i>
+          <span>Navi Mumbai, India</span>
+        </div>
+        <div class="top-bar-item">
+          <i class="fas fa-envelope"></i>
+          <span>lifefirsthealthcareservices@gmail.com</span>
+        </div>
+        <div class="top-bar-item">
+          <i class="fas fa-clock"></i>
+          <span>24/7 Emergency Available</span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <div class="top-bar-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html#home" class="logo">
+          <img src="./assets/images/real-logo.jpg" alt="Life First Healthcare" />
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html#home" class="active">Home</a></li>
+          <li class="dropdown">
+            <a href="index.html#services" class="dropdown-toggle">
+              Services <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a href="index.html#services" class="dropdown-item">
+                <span class="dd-icon"><i class="fas fa-hand-holding-heart"></i></span> Elder Care
+              </a>
+              <a href="index.html#services" class="dropdown-item">
+                <span class="dd-icon"><i class="fas fa-user-nurse"></i></span> Nursing Care
+              </a>
+              <a href="index.html#services" class="dropdown-item">
+                <span class="dd-icon"><i class="fas fa-person-walking"></i></span> Physiotherapy
+              </a>
+              <a href="index.html#services" class="dropdown-item">
+                <span class="dd-icon"><i class="fas fa-bed-pulse"></i></span> ICU at Home
+              </a>
+              <a href="index.html#services" class="dropdown-item">
+                <span class="dd-icon"><i class="fas fa-wheelchair-move"></i></span> Medical Equipment
+              </a>
+              <a href="index.html#services" class="dropdown-item">
+                <span class="dd-icon"><i class="fas fa-apple-whole"></i></span> Nutrition
+              </a>
+            </div>
+          </li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#how-it-works">Process</a></li>
+          <li><a href="index.html#testimonials">Reviews</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="#" onclick="openPaymentModal(event)" class="nav-pay-btn"><i class="fas fa-qrcode"></i> Pay Online</a></li>
+          <li class="mobile-nav-cta">
+            <a href="tel:+919870086074" class="btn btn-outline-primary" style="margin-bottom: 10px;"><i class="fas fa-phone"></i> +91 98700 86074</a>
+            <a href="index.html#contact" class="btn btn-primary">Book Now</a>
+          </li>
+        </ul>
+
+        <div class="nav-cta">
+          <a href="tel:+919870086074" class="nav-phone">
+            <i class="fas fa-phone"></i> +91 98700 86074
+          </a>
+          <a href="index.html#contact" class="btn btn-primary">Book Now</a>
+        </div>
+
+        <div class="menu-toggle" id="menuToggle" aria-label="Open menu" role="button" tabindex="0">
+          <span></span><span></span><span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  
+  <main id="main-content" style="padding: 140px 0 60px; min-height: 80vh;">
+    <div class="container" style="max-width: 800px; margin: 0 auto; background: var(--white); padding: 40px; border-radius: var(--r-2xl); box-shadow: var(--shadow-md); position: relative;">
+      <a href="index.html" aria-label="Close and return to home" style="position: absolute; top: 25px; right: 25px; width: 40px; height: 40px; background: var(--gray-100); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--text-dark); text-decoration: none; font-size: 1.2rem; transition: 0.3s; box-shadow: 0 2px 5px rgba(0,0,0,0.1);" onmouseover="this.style.background='var(--primary)'; this.style.color='white';" onmouseout="this.style.background='var(--gray-100)'; this.style.color='var(--text-dark)';">
+        <i class="fas fa-times"></i>
+      </a>
+      <h1 style="color: var(--primary); font-size: 2.5rem; margin-bottom: 30px; border-bottom: 2px solid var(--gray-200); padding-bottom: 15px; padding-right: 50px;">Terms and Conditions</h1>
+      
+      <p style="color: var(--gray-700); line-height: 1.8; margin-bottom: 30px;">
+        <strong>Life First Healthcare Services</strong>
+      </p>
+
+      <ul style="color: var(--gray-700); line-height: 2; margin-bottom: 20px; padding-left: 0; list-style-type: none;">
+        <li style="margin-bottom: 15px;"><strong>1)</strong> All payments made are subject to realization of the same.</li>
+        <li style="margin-bottom: 15px;"><strong>2)</strong> Customer is liable to pay surcharge levied for delayed payment at such rates as specified from time to time.</li>
+        <li style="margin-bottom: 15px;"><strong>3)</strong> Customer is advised to make payment in full of the due amount along with delayed payment charges, if any.</li>
+        <li style="margin-bottom: 15px;"><strong>4)</strong> The payment made by the customer vide this receipt shall under no circumstances be deemed for full &amp; final settlement.</li>
+        <li style="margin-bottom: 15px;"><strong>5)</strong> All claims subject to exclusive jurisdiction of Mumbai courts only.</li>
+      </ul>
+
+      <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--gray-200); text-align: center;">
+        <h4 style="color: var(--primary); margin-bottom: 10px;">Life First Healthcare Services</h4>
+        <p style="color: var(--gray-600); font-size: 0.9rem;">
+          Doctor Consultation | Nursing Care | Physiotherapy | Trained Attendant<br>
+          Elder Care | Mother & Baby Care | Medical Equipment
+        </p>
+      </div>
+    </div>
+  </main>
+
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html#home" class="logo footer-logo">
+            <img src="./assets/images/real-logo.jpg" alt="Life First Healthcare" loading="lazy" />
+          </a>
+          <p>Life First Healthcare brings quality, compassionate medical care to your doorstep. Professional healthcare that's accessible, affordable, and patient-centric.</p>
+          <p class="tagline">Care. Compassion. Life First.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/lifefirst.24/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@LifeFirstHealthcare" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#how-it-works">How It Works</a></li>
+            <li><a href="index.html#testimonials">Reviews</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="#" onclick="openPaymentModal(event)" style="font-weight: 600;"><i class="fas fa-qrcode" style="margin-right: 4px;"></i> Pay Online (UPI)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Our Services</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#services">Elder Care</a></li>
+            <li><a href="index.html#services">Nursing Care</a></li>
+            <li><a href="index.html#services">Physiotherapy</a></li>
+            <li><a href="index.html#services">ICU at Home</a></li>
+            <li><a href="index.html#services">Medical Equipment</a></li>
+            <li><a href="index.html#services">Nutrition</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact Info</h4>
+          <div class="footer-contact-item">
+            <i class="fas fa-location-dot"></i>
+            <span>
+              near Durga Mata Mandir Road, Sector 4, Airoli, Navi Mumbai 400708<br>
+              <a href="https://www.google.com/maps/search/?api=1&query=near+Durga+Mata+Mandir+Road,+Sector+4,+Airoli,+Navi+Mumbai,+Maharashtra+400708" target="_blank" rel="noopener" style="color: #6ee7b7; font-size: 0.8rem; text-decoration: underline; margin-top: 3px; display: inline-block;">View on Google Maps</a>
+            </span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-phone"></i>
+            <span>+91 98700 86074</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>lifefirsthealthcareservices@gmail.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-clock"></i>
+            <span>24/7 Available</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Life First Healthcare Services All Rights Reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="#">Refund Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== FLOATING BUTTONS ===================== -->
+  <div class="whatsapp-float">
+    <a href="https://wa.me/919870086074?text=Hello,%20I'm%20interested%20in%20your%20home%20healthcare%20services.%20Please%20guide%20me." target="_blank" class="whatsapp-btn" aria-label="Chat on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- ===================== PAYMENT MODAL ===================== -->
+  <div class="modal-overlay" id="paymentModal">
+    <div class="payment-modal-card">
+      <button type="button" class="modal-close-btn" onclick="closePaymentModal()" aria-label="Close modal">&times;</button>
+      <div class="payment-modal-header">
+        <i class="fas fa-shield-halved" style="color: #00A86B; font-size: 2.2rem; margin-bottom: 12px;"></i>
+        <h3>Secure UPI Payment</h3>
+        <p>Life First Healthcare Services</p>
+      </div>
+      <div class="payment-modal-body">
+        <div class="qr-container">
+          <img src="./assets/images/qr-code.jpg" alt="UPI QR Code - Scan to Pay" loading="lazy" />
+        </div>
+        <div class="payment-details">
+          <div class="upi-id-box">
+            <div class="upi-text-wrap">
+              <span class="label">UPI ID</span>
+              <span class="value" id="upiIdText">lifefirsthealthcareservices@okicici</span>
+            </div>
+            <button type="button" class="copy-btn" onclick="copyUpiId()" title="Copy UPI ID">
+              <i class="far fa-copy"></i> Copy
+            </button>
+          </div>
+          <p class="payment-instruction">
+            Scan the QR code with any UPI app (Google Pay, PhonePe, Paytm, BHIM, etc.) or copy the UPI ID to make a secure payment.
+          </p>
+          <div class="secure-badges">
+            <span><i class="fas fa-check-double"></i> Instantly Credited</span>
+            <span><i class="fas fa-lock"></i> 100% Safe Payment</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== JAVASCRIPT ===================== -->
+  <script>
+    // === DOM Elements ===
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    const navOverlay = document.getElementById('navOverlay');
+    const header = document.getElementById('header');
+    const backToTop = document.getElementById('backToTop');
+
+    // === Mobile Navigation ===
+    function toggleMenu(open) {
+      const isOpen = open !== undefined ? open : !navLinks.classList.contains('open');
+      menuToggle.classList.toggle('active', isOpen);
+      menuToggle.setAttribute('aria-expanded', isOpen);
+      navLinks.classList.toggle('open', isOpen);
+      navOverlay.classList.toggle('active', isOpen);
+      const isModalOpen = document.getElementById('paymentModal').classList.contains('active');
+      document.body.style.overflow = (isOpen || isModalOpen) ? 'hidden' : '';
+    }
+
+    menuToggle.addEventListener('click', () => toggleMenu());
+    menuToggle.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleMenu();
+      }
+    });
+    navOverlay.addEventListener('click', () => toggleMenu(false));
+    navLinks.querySelectorAll('a:not(.dropdown-toggle)').forEach(link =>
+      link.addEventListener('click', () => toggleMenu(false))
+    );
+
+    // Clear mobile menu state on window resize (e.g. tablet rotation)
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768 && navLinks.classList.contains('open')) {
+        toggleMenu(false);
+      }
+    });
+
+    // Mobile dropdown
+    document.querySelectorAll('.dropdown').forEach(dd => {
+      dd.querySelector('.dropdown-toggle').addEventListener('click', e => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          dd.classList.toggle('active');
+        }
+      });
+    });
+
+    // === Performance Optimized Scroll (60fps) ===
+    const sections = document.querySelectorAll('section[id]');
+    const heroBg = document.querySelector('.hero-bg');
+    let scrollTicking = false;
+
+    window.addEventListener('scroll', () => {
+      if (!scrollTicking) {
+        window.requestAnimationFrame(() => {
+          // 1. Sticky Header & Back to Top
+          const y = window.scrollY;
+          header.classList.toggle('scrolled', y > 40);
+          backToTop.classList.toggle('visible', y > 500);
+
+          // 2. Hero Parallax Effect
+          if (heroBg && y < window.innerHeight) {
+            heroBg.style.transform = `translate3d(0, ${y * 0.3}px, 0)`;
+          }
+
+          // 3. Active Nav Highlighting
+          const navY = y + 120;
+          sections.forEach(s => {
+            const match = navY >= s.offsetTop && navY < s.offsetTop + s.offsetHeight;
+            const link = document.querySelector(`.nav-links a[href="#${s.id}"]`);
+            if (link) link.classList.toggle('active', match);
+          });
+
+          scrollTicking = false;
+        });
+        scrollTicking = true;
+      }
+    }, { passive: true });
+
+    // === Back to Top ===
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // === Smooth Scroll ===
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (href === '#' || !href) {
+          e.preventDefault();
+          return;
+        }
+        try {
+          const t = document.querySelector(href);
+          if (t) {
+            e.preventDefault();
+            // Calculate header height dynamically to offset the scroll target position
+            const headerElement = document.getElementById('header');
+            const headerHeight = headerElement ? headerElement.offsetHeight : 80;
+            const targetPos = t.getBoundingClientRect().top + window.scrollY - headerHeight;
+            window.scrollTo({
+              top: targetPos,
+              behavior: 'smooth'
+            });
+          }
+        } catch (err) {
+          console.warn("Smooth scroll selector warning:", err);
+        }
+      });
+    });
+
+
+    // === Scroll Reveal ===
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // === Counter Animation ===
+    function animateValue(el, target, suffix = '+', decimals = 0) {
+      if (!el) return;
+      let current = 0;
+      const step = target / 50;
+      const timer = setInterval(() => {
+        current += step;
+        if (current >= target) { current = target; clearInterval(timer); }
+        el.textContent = (decimals ? current.toFixed(1) : Math.floor(current).toLocaleString()) + suffix;
+      }, 35);
+    }
+
+    const heroObs = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) {
+        animateValue(document.getElementById('statPatients'), 2000, '+');
+        animateValue(document.getElementById('statProfessionals'), 200, '+');
+        animateValue(document.getElementById('statRating'), 4.8, '★', 1);
+        heroObs.disconnect();
+      }
+    }, { threshold: 0.25 });
+    heroObs.observe(document.getElementById('home'));
+
+    // === Form Submit (Dual Integration: Email + WhatsApp) ===
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const btn = form.querySelector('button[type="submit"]');
+      if (btn.disabled) return; // Prevent double submission
+      
+      const orig = btn.innerHTML;
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+      btn.disabled = true;
+
+      // 1. Collect form data for WhatsApp
+      const name = form.name.value;
+      const phone = form.phone.value;
+      const email = form.email.value || 'Not provided';
+      const service = form.service.options[form.service.selectedIndex].text;
+      const message = form.message.value || 'No additional message';
+
+      // 2. Prepare and send Email Request in background (FormSubmit)
+      const formData = new FormData(form);
+      fetch("https://formsubmit.co/ajax/lifefirsthealthcareservices@gmail.com", {
+        method: "POST",
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      }).catch(err => console.error("Email notification failed silently: ", err));
+
+      // 3. Prepare WhatsApp Request
+      const targetPhone = "919870086074";
+      const waMessage = `*Life First Callback Request!* 🚨\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Email:* ${email}\n*Service Needed:* ${service}\n*Message:* ${message}`;
+      const waUrl = `https://wa.me/${targetPhone}?text=${encodeURIComponent(waMessage)}`;
+
+      // 4. Open WhatsApp immediately
+      window.open(waUrl, '_blank');
+
+      // 5. Success UI Feedback
+      setTimeout(() => {
+        btn.innerHTML = '<i class="fas fa-check-circle"></i> Request Sent!';
+        btn.style.background = '#25D366';
+        btn.style.borderColor = '#25D366';
+        form.reset();
+        
+        setTimeout(() => {
+          btn.innerHTML = orig;
+          btn.style.background = '';
+          btn.style.borderColor = '';
+          btn.disabled = false;
+        }, 4000);
+      }, 1000);
+    }
+
+    // === Payment Modal Handling ===
+    const paymentModal = document.getElementById('paymentModal');
+
+    function openPaymentModal(e) {
+      if (e) e.preventDefault();
+      paymentModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePaymentModal() {
+      paymentModal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Close on click outside
+    paymentModal.addEventListener('click', (e) => {
+      if (e.target === paymentModal) {
+        closePaymentModal();
+      }
+    });
+
+    // Close modals on Escape key press (A11y/UX fix)
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (paymentModal.classList.contains('active')) closePaymentModal();
+        if (navLinks.classList.contains('open')) toggleMenu(false);
+      }
+    });
+
+    // Copy UPI ID function
+    function copyUpiId() {
+      const upiText = document.getElementById('upiIdText').textContent;
+      navigator.clipboard.writeText(upiText).then(() => {
+        const copyBtn = document.querySelector('.upi-id-box .copy-btn');
+        const origText = copyBtn.innerHTML;
+        copyBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+        copyBtn.style.background = '#00A86B';
+        copyBtn.style.color = '#fff';
+        copyBtn.style.borderColor = '#00A86B';
+        setTimeout(() => {
+          copyBtn.innerHTML = origText;
+          copyBtn.style.background = '';
+          copyBtn.style.color = '';
+          copyBtn.style.borderColor = '';
+        }, 2000);
+      }).catch(err => {
+        console.error('Failed to copy text: ', err);
+      });
+    }
+  </script>
+
+
+
+</body>
+</html>

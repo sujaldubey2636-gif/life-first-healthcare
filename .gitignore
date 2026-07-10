@@ -1,0 +1,16 @@
+# Python script builders
+make_privacy.py
+make_terms.py
+make_refund.py
+*.py
+
+# PHP mailer fallback (no longer used)
+contact.php
+
+# Local test & debug files
+test_form.html
+js_check.js
+
+# OS files
+.DS_Store
+Thumbs.db

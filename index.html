@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#003366" />
+  <title>Life First Healthcare - Quality Home Healthcare, Delivered to Your Doorstep</title>
+  <meta name="description" content="Life First Healthcare provides premium home healthcare services — elder care, nursing, physiotherapy, ICU at home, lab tests & more. 24/7 care with verified professionals." />
+  <meta name="keywords" content="home healthcare, elder care, nursing care, physiotherapy at home, ICU at home, lab tests, medical equipment, dental care, nutrition, Life First Healthcare" />
+
+  <!-- Fonts (Plus Jakarta Sans + DM Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./assets/images/logo.png" />
+</head>
+<body>
+
+  <!-- ===================== TOP BAR ===================== -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <div class="top-bar-item">
+          <i class="fas fa-location-dot"></i>
+          <span>Navi Mumbai, India</span>
+        </div>
+        <div class="top-bar-item">
+          <i class="fas fa-envelope"></i>
+          <span>lifefirsthealthcareservices@gmail.com</span>
+        </div>
+        <div class="top-bar-item">
+          <i class="fas fa-clock"></i>
+          <span>24/7 Emergency Available</span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <div class="top-bar-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="#home" class="logo">
+          <img src="./assets/images/real-logo.jpg" alt="Life First Healthcare" />
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="active">Home</a></li>
+          <li class="dropdown">
+            <a href="#services" class="dropdown-toggle">
+              Services <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a href="#services" class="dropdown-item">
+                <span class="dd-icon"><i class="fas fa-hand-holding-heart"></i></span> Elder Care
+              </a>
+              <a href="#services" class="dropdown-item">
+                <span class="dd-icon"><i class="fas fa-user-nurse"></i></span> Nursing Care
+              </a>
+              <a href="#services" class="dropdown-item">
+                <span class="dd-icon"><i class="fas fa-person-walking"></i></span> Physiotherapy
+              </a>
+              <a href="#services" class="dropdown-item">
+                <span class="dd-icon"><i class="fas fa-bed-pulse"></i></span> ICU at Home
+              </a>
+              <a href="#services" class="dropdown-item">
+                <span class="dd-icon"><i class="fas fa-wheelchair-move"></i></span> Medical Equipment
+              </a>
+              <a href="#services" class="dropdown-item">
+                <span class="dd-icon"><i class="fas fa-apple-whole"></i></span> Nutrition
+              </a>
+            </div>
+          </li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#how-it-works">Process</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#" onclick="openPaymentModal(event)" class="nav-pay-btn"><i class="fas fa-qrcode"></i> Pay Online</a></li>
+          <li class="mobile-nav-cta">
+            <a href="tel:+919870086074" class="btn btn-outline-primary" style="margin-bottom: 10px;"><i class="fas fa-phone"></i> +91 98700 86074</a>
+            <a href="#contact" class="btn btn-primary">Book Now</a>
+          </li>
+        </ul>
+
+        <div class="nav-cta">
+          <a href="tel:+919870086074" class="nav-phone">
+            <i class="fas fa-phone"></i> +91 98700 86074
+          </a>
+          <a href="#contact" class="btn btn-primary">Book Now</a>
+        </div>
+
+        <div class="menu-toggle" id="menuToggle" aria-label="Open menu" role="button" tabindex="0">
+          <span></span><span></span><span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <main id="main-content">
+  <!-- ===================== HERO SECTION ===================== -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <img src="./assets/images/hero-premium.png" alt="Compassionate Home Healthcare" />
+    </div>
+
+    <!-- EKG Line Animation -->
+    <div class="hero-ekg">
+      <svg viewBox="0 0 2000 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 30 L100 30 L120 30 L130 10 L140 50 L150 5 L160 55 L170 30 L200 30 L300 30 L320 30 L330 10 L340 50 L350 5 L360 55 L370 30 L400 30 L500 30 L520 30 L530 10 L540 50 L550 5 L560 55 L570 30 L600 30 L700 30 L720 30 L730 10 L740 50 L750 5 L760 55 L770 30 L800 30 L900 30 L920 30 L930 10 L940 50 L950 5 L960 55 L970 30 L1000 30" stroke="white" stroke-width="2"/>
+      </svg>
+    </div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span class="pulse-dot"></span>
+          Trusted Home Healthcare Provider
+        </div>
+
+        <h1>
+          Quality Healthcare,<br>
+          <span class="text-gradient">Delivered to Your Doorstep</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          From nursing care and physiotherapy to ICU setup at home — we bring compassionate, professional healthcare right where you need it most.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#services" class="btn btn-white btn-lg">
+            <i class="fas fa-heartbeat"></i> Explore Services
+          </a>
+          <a href="tel:+919870086074" class="btn btn-outline-white btn-lg">
+            <i class="fas fa-phone"></i> Call Us Now
+          </a>
+        </div>
+
+        <div class="hero-stats-bar">
+          <div class="hero-stat">
+            <div class="hero-stat-icon"><i class="fas fa-users"></i></div>
+            <div>
+              <div class="hero-stat-num" id="statPatients">0+</div>
+              <div class="hero-stat-label">Happy Patients</div>
+            </div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-icon"><i class="fas fa-user-doctor"></i></div>
+            <div>
+              <div class="hero-stat-num" id="statProfessionals">0+</div>
+              <div class="hero-stat-label">Professionals</div>
+            </div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-icon"><i class="fas fa-star"></i></div>
+            <div>
+              <div class="hero-stat-num" id="statRating">0</div>
+              <div class="hero-stat-label">Google Rating</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Booking Card -->
+      <div class="hero-visual">
+        <div class="booking-card">
+          <div class="booking-card-header">
+            <i class="fas fa-calendar-check"></i>
+            <div>
+              <h3>Quick Book a Service</h3>
+              <p>Choose a service to get started</p>
+            </div>
+          </div>
+          <a href="#contact" class="quick-service">
+            <span class="quick-service-icon"><i class="fas fa-hand-holding-heart"></i></span>
+            <span class="quick-service-text">Elder Care</span>
+            <span class="quick-service-arrow"><i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="#contact" class="quick-service">
+            <span class="quick-service-icon"><i class="fas fa-user-nurse"></i></span>
+            <span class="quick-service-text">Nursing Care at Home</span>
+            <span class="quick-service-arrow"><i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="#contact" class="quick-service">
+            <span class="quick-service-icon"><i class="fas fa-person-walking"></i></span>
+            <span class="quick-service-text">Physiotherapy at Home</span>
+            <span class="quick-service-arrow"><i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="#contact" class="quick-service">
+            <span class="quick-service-icon"><i class="fas fa-bed-pulse"></i></span>
+            <span class="quick-service-text">ICU Setup at Home</span>
+            <span class="quick-service-arrow"><i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="#contact" class="quick-service">
+            <span class="quick-service-icon"><i class="fas fa-wheelchair-move"></i></span>
+            <span class="quick-service-text">Medical Equipment</span>
+            <span class="quick-service-arrow"><i class="fas fa-arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TRUST STRIP ===================== -->
+  <section class="trust-strip">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-item reveal">
+          <div class="trust-item-icon"><i class="fas fa-shield-halved"></i></div>
+          <div>
+            <div class="trust-item-value">100%</div>
+            <div class="trust-item-label">Verified Staff</div>
+          </div>
+        </div>
+        <div class="trust-item reveal d1">
+          <div class="trust-item-icon green"><i class="fas fa-headset"></i></div>
+          <div>
+            <div class="trust-item-value">24/7</div>
+            <div class="trust-item-label">Emergency Support</div>
+          </div>
+        </div>
+        <div class="trust-item reveal d2">
+          <div class="trust-item-icon warm"><i class="fas fa-heart-pulse"></i></div>
+          <div>
+            <div class="trust-item-value">2000+</div>
+            <div class="trust-item-label">Lives Touched</div>
+          </div>
+        </div>
+        <div class="trust-item reveal d3">
+          <div class="trust-item-icon"><i class="fas fa-award"></i></div>
+          <div>
+            <div class="trust-item-value">4.8★</div>
+            <div class="trust-item-label">Patient Satisfaction</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label"><i class="fas fa-stethoscope"></i> Our Services</span>
+        <h2 class="section-title">Complete <span class="highlight">Home Healthcare</span> Solutions</h2>
+        <p class="section-desc">Hospital-quality care, delivered with warmth and compassion in the comfort of your own home.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-card-img">
+            <img src="./assets/images/post-hospitalization.png" alt="Post-hospitalization care" loading="lazy" />
+            <div class="service-icon-badge"><i class="fas fa-hospital-user"></i></div>
+          </div>
+          <div class="service-card-body">
+            <h3>Post-hospitalization</h3>
+            <p>Comprehensive care and support after hospital discharge to ensure safe, smooth, and speedy recovery at home.</p>
+            <a href="#contact" class="service-card-link">Book Service <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="service-card reveal d1">
+          <div class="service-card-img">
+            <img src="./assets/images/chronic-disease.png" alt="Chronic disease management" loading="lazy" />
+            <div class="service-icon-badge"><i class="fas fa-notes-medical"></i></div>
+          </div>
+          <div class="service-card-body">
+            <h3>Chronic Disease Mgmt</h3>
+            <p>Specialized monitoring and care for long-term health conditions like diabetes, hypertension, and respiratory illnesses.</p>
+            <a href="#contact" class="service-card-link">Book Service <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="service-card reveal d2">
+          <div class="service-card-img">
+            <img src="./assets/images/elder-care.png" alt="Elderly care" loading="lazy" />
+            <div class="service-icon-badge"><i class="fas fa-hand-holding-heart"></i></div>
+          </div>
+          <div class="service-card-body">
+            <h3>Elderly Care</h3>
+            <p>Compassionate care for seniors, including specialized support for Dementia, Parkinson's, and Alzheimer's patients.</p>
+            <a href="#contact" class="service-card-link">Book Service <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="service-card reveal d3">
+          <div class="service-card-img">
+            <img src="./assets/images/wound-care.png" alt="Wound care" loading="lazy" />
+            <div class="service-icon-badge"><i class="fas fa-band-aid"></i></div>
+          </div>
+          <div class="service-card-body">
+            <h3>Wound Care</h3>
+            <p>Professional cleaning, dressing, and infection prevention for surgical wounds, ulcers, and bedsores.</p>
+            <a href="#contact" class="service-card-link">Book Service <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="service-card reveal d4">
+          <div class="service-card-img">
+            <img src="./assets/images/icu-at-home.png" alt="IV therapy" loading="lazy" />
+            <div class="service-icon-badge"><i class="fas fa-pump-medical"></i></div>
+          </div>
+          <div class="service-card-body">
+            <h3>IV Therapy</h3>
+            <p>Safe administration of intravenous medications, antibiotics, and fluids by registered nurses at home.</p>
+            <a href="#contact" class="service-card-link">Book Service <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="service-card reveal d5">
+          <div class="service-card-img">
+            <img src="./assets/images/medical-equipment.png" alt="Vital sign monitoring" loading="lazy" />
+            <div class="service-icon-badge"><i class="fas fa-heart-pulse"></i></div>
+          </div>
+          <div class="service-card-body">
+            <h3>Vital Sign Monitoring</h3>
+            <p>Regular checking and recording of blood pressure, heart rate, oxygen levels, and temperature.</p>
+            <a href="#contact" class="service-card-link">Book Service <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="service-card reveal d6">
+          <div class="service-card-img">
+            <img src="./assets/images/doctor-consultation.png" alt="Medication management" loading="lazy" />
+            <div class="service-icon-badge"><i class="fas fa-pills"></i></div>
+          </div>
+          <div class="service-card-body">
+            <h3>Medication Mgmt</h3>
+            <p>Ensuring timely and correct administration of prescribed medicines to avoid missed doses or errors.</p>
+            <a href="#contact" class="service-card-link">Book Service <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="service-card reveal d7">
+          <div class="service-card-img">
+            <img src="./assets/images/baby-care.png" alt="Baby care" loading="lazy" />
+            <div class="service-icon-badge"><i class="fas fa-baby"></i></div>
+          </div>
+          <div class="service-card-body">
+            <h3>Baby Care</h3>
+            <p>Expert neonatal and infant care, helping new mothers with feeding, bathing, and baby sleep routines.</p>
+            <a href="#contact" class="service-card-link">Book Service <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WHY CHOOSE US ===================== -->
+  <section class="section why-section" id="why-us">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label"><i class="fas fa-heart"></i> Why Life First</span>
+        <h2 class="section-title">Why Families <span class="highlight">Trust Us</span></h2>
+        <p class="section-desc">We go beyond standard healthcare — delivering compassionate, personalized care that truly makes a difference.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <div class="why-card-icon blue"><i class="fas fa-user-shield"></i></div>
+          <h3>Background-Verified Staff</h3>
+          <p>Every nurse, therapist, and caregiver undergoes thorough police verification, credential checks, and clinical skill assessments.</p>
+        </div>
+        <div class="why-card reveal d1">
+          <div class="why-card-icon green"><i class="fas fa-clock-rotate-left"></i></div>
+          <h3>24/7 Availability</h3>
+          <p>Healthcare emergencies don't wait — and neither do we. Our care coordination team is available round-the-clock, 365 days.</p>
+        </div>
+        <div class="why-card reveal d2">
+          <div class="why-card-icon warm"><i class="fas fa-indian-rupee-sign"></i></div>
+          <h3>Transparent Pricing</h3>
+          <p>No hidden charges. Clear, upfront pricing with flexible hourly, daily, or monthly care plans to suit every budget.</p>
+        </div>
+        <div class="why-card reveal d3">
+          <div class="why-card-icon blue"><i class="fas fa-clipboard-list"></i></div>
+          <h3>Customized Care Plans</h3>
+          <p>Every patient is unique. We create tailored care plans designed around individual health needs and family preferences.</p>
+        </div>
+        <div class="why-card reveal d4">
+          <div class="why-card-icon green"><i class="fas fa-hospital"></i></div>
+          <h3>Hospital-Grade Equipment</h3>
+          <p>We deploy the same advanced medical devices found in leading hospitals — ventilators, monitors, and infusion pumps at home.</p>
+        </div>
+        <div class="why-card reveal d5">
+          <div class="why-card-icon warm"><i class="fas fa-people-roof"></i></div>
+          <h3>Family-Centric Care</h3>
+          <p>We keep families informed at every step with regular health updates, ensuring complete peace of mind for loved ones.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT US ===================== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-images reveal">
+          <div class="about-experience-badge">
+            <div class="num">11+</div>
+            <div class="txt">Years of<br>Excellence</div>
+          </div>
+          <div class="about-img-main">
+            <img src="./assets/images/elder-care.png" alt="Elderly Care" loading="lazy" />
+            <img src="./assets/images/baby-care.png" alt="Baby Care" loading="lazy" />
+            <img src="./assets/images/wound-care.png" alt="Wound Care" loading="lazy" />
+            <img src="./assets/images/post-hospitalization.png" alt="Post Hospitalization" loading="lazy" />
+          </div>
+          <div class="about-img-float">
+            <img src="./assets/images/happy-family.png" alt="Happy patient family" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="about-content reveal d2">
+          <span class="section-label"><i class="fas fa-info-circle"></i> About Us</span>
+          
+          <div class="message-card" style="background: var(--white); border-radius: var(--radius-lg); padding: var(--sp-8); box-shadow: var(--shadow-sm); border: 1px solid var(--gray-200); font-family: 'DM Sans', sans-serif;">
+            
+            <h3 style="font-size: 1.45rem; color: var(--gray-900); font-weight: 800; margin-bottom: var(--sp-3); font-family: var(--font-heading); display: flex; align-items: center; gap: 10px;">
+              <i class="fas fa-user-nurse" style="color: var(--primary);"></i> Expert Nursing Care Across Mumbai
+            </h3>
+            
+            <p style="font-size: 1.05rem; color: var(--gray-600); line-height: 1.7; margin-bottom: var(--sp-6);">
+              We provide high-quality home nursing services throughout the Mumbai region, delivering compassionate, hospital-grade care directly in the <strong>comfort and safety of your own home.</strong>
+            </p>
+            
+            <div class="about-info-grid">
+              <div>
+                <h4 style="font-size: 1.1rem; color: var(--primary-dark); font-weight: 700; margin-bottom: var(--sp-3); display: flex; align-items: center; gap: 8px;">
+                  <i class="fas fa-briefcase-medical" style="font-size: 0.95rem;"></i> Core Services
+                </h4>
+                <ul style="list-style: none; padding-left: 0; line-height: 1.8; color: var(--gray-600); font-size: 1rem;">
+                  <li style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;"><i class="fas fa-check-circle" style="color: var(--accent); font-size: 0.9rem;"></i> Post-hospitalization care</li>
+                  <li style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;"><i class="fas fa-check-circle" style="color: var(--accent); font-size: 0.9rem;"></i> Chronic disease management</li>
+                  <li style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;"><i class="fas fa-check-circle" style="color: var(--accent); font-size: 0.9rem;"></i> Elderly & Dementia care</li>
+                  <li style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;"><i class="fas fa-check-circle" style="color: var(--accent); font-size: 0.9rem;"></i> Wound & Bedsore dressing</li>
+                  <li style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;"><i class="fas fa-check-circle" style="color: var(--accent); font-size: 0.9rem;"></i> IV Therapy & Vital monitoring</li>
+                  <li style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;"><i class="fas fa-check-circle" style="color: var(--accent); font-size: 0.9rem;"></i> Medication management</li>
+                  <li style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;"><i class="fas fa-check-circle" style="color: var(--accent); font-size: 0.9rem;"></i> Professional Baby care</li>
+                </ul>
+              </div>
+              <div>
+                <h4 style="font-size: 1.1rem; color: var(--primary-dark); font-weight: 700; margin-bottom: var(--sp-3); display: flex; align-items: center; gap: 8px;">
+                  <i class="fas fa-map-location-dot" style="font-size: 0.95rem;"></i> Service Areas
+                </h4>
+                <p style="color: var(--gray-600); font-size: 0.95rem; line-height: 1.5; margin-bottom: var(--sp-4);">
+                  We cover all major locations across:
+                </p>
+                <div style="display: flex; flex-direction: column; gap: 6px;">
+                  <span style="background: var(--primary-light); color: var(--primary-dark); padding: 4px 10px; border-radius: var(--radius-sm); font-size: 0.85rem; font-weight: 600; text-align: center;">Mumbai City</span>
+                  <span style="background: var(--primary-light); color: var(--primary-dark); padding: 4px 10px; border-radius: var(--radius-sm); font-size: 0.85rem; font-weight: 600; text-align: center;">Mumbai Suburbs</span>
+                  <span style="background: var(--primary-light); color: var(--primary-dark); padding: 4px 10px; border-radius: var(--radius-sm); font-size: 0.85rem; font-weight: 600; text-align: center;">Navi Mumbai</span>
+                  <span style="background: var(--primary-light); color: var(--primary-dark); padding: 4px 10px; border-radius: var(--radius-sm); font-size: 0.85rem; font-weight: 600; text-align: center;">Thane Region</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="background: var(--gray-50); border-radius: var(--radius-md); padding: var(--sp-4) var(--sp-5); border: 1px solid var(--gray-200); margin-bottom: var(--sp-5); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px;">
+              <div>
+                <h4 style="font-size: 0.95rem; color: var(--gray-800); font-weight: 700; margin-bottom: 2px;">Care Coordinator</h4>
+                <p style="color: var(--gray-500); font-size: 0.85rem; margin-bottom: 0;">Mr. Hare Krishna (Care Navigator)</p>
+              </div>
+              <a href="tel:+919870086074" class="btn btn-primary btn-sm" style="font-size: 0.85rem; display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: var(--radius-md); font-weight: 700; text-decoration: none;">
+                <i class="fas fa-phone"></i> +91 98700 86074
+              </a>
+            </div>
+
+            <!-- Clickable Google Reviews section inside About Us card -->
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; border-top: 1px solid var(--gray-200); padding-top: 15px;">
+              <span style="font-size: 0.9rem; color: var(--gray-500); display: flex; align-items: center; gap: 5px;">
+                <i class="fab fa-google" style="color: #4285F4;"></i> Verified Google Business Listing
+              </span>
+              <a href="https://www.google.com/search?q=life+first+healthcare+services+navi+mumbai+reviews" target="_blank" rel="noopener" class="btn btn-outline-primary" style="font-size: 0.85rem; padding: 6px 14px; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; border-radius: var(--radius-md); font-weight: 600;">
+                Check Our Reviews <i class="fas fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HOW IT WORKS ===================== -->
+  <section class="section why-section" id="how-it-works">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label"><i class="fas fa-route"></i> How It Works</span>
+        <h2 class="section-title">Your Journey to <span class="highlight-green">Better Health</span></h2>
+        <p class="section-desc">Getting started is simple. Four easy steps to bring hospital-quality care right to your home.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card reveal">
+          <div class="step-num">01</div>
+          <h3>Book a Consultation</h3>
+          <p>Call us or fill our form. Our care coordinator will understand your needs and schedule a home visit.</p>
+        </div>
+        <div class="step-card reveal d1">
+          <div class="step-num">02</div>
+          <h3>Clinical Assessment</h3>
+          <p>Our medical team performs a thorough patient assessment and designs a personalized care plan.</p>
+        </div>
+        <div class="step-card reveal d2">
+          <div class="step-num">03</div>
+          <h3>Caregiver Assignment</h3>
+          <p>We match the right professional — nurse, therapist, or caregiver — to your specific needs.</p>
+        </div>
+        <div class="step-card reveal d3">
+          <div class="step-num">04</div>
+          <h3>Begin Home Care</h3>
+          <p>Your assigned professional arrives at your doorstep. Regular updates keep you informed every step.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label"><i class="fas fa-quote-left"></i> Patient Reviews</span>
+        <h2 class="section-title">Trusted by <span class="highlight">2000+ Families</span></h2>
+        <p class="section-desc">Real stories from real families who trusted Life First Healthcare with the health of their loved ones.</p>
+        
+        <a href="https://www.google.com/search?q=life+first+healthcare+services+navi+mumbai+reviews" target="_blank" rel="noopener" class="google-rating" style="margin-top: var(--sp-4); display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: var(--white); padding: 10px 20px; border-radius: 50px; box-shadow: var(--shadow-sm); border: 1px solid var(--gray-200); text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='var(--shadow-md)';" onmouseout="this.style.transform='none'; this.style.boxShadow='var(--shadow-sm)';">
+          <i class="fab fa-google" style="color: #4285F4; font-size: 1.25rem;"></i>
+          <span style="font-size: 1.25rem; font-weight: 700; color: var(--gray-800);">4.8</span>
+          <div class="stars" style="color: #fbbc04; font-size: 1.1rem; display: flex; gap: 2px;">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+          </div>
+          <span style="color: var(--gray-500); font-size: 0.95rem; margin-left: 5px;">Excellent Google Reviews</span>
+        </a>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars" style="color: #fbbc04;">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"The service offered by Life first Healthcare Services was immensely reliable. Special thanks to Mr. Harikrishna for his prompt action in identifying the caregiver. Grateful to the caregiver Mr Sugriv ji for his regular, punctual and reliable service. I would recommend Life First Healthcare for their caregiver services."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background: #e2e8f0; color: #475569; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 50%; font-size: 1.2rem;">S</div>
+            <div>
+              <div class="testimonial-name">Srinath R</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal d1">
+          <div class="testimonial-stars" style="color: #fbbc04;">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+          </div>
+          <p class="testimonial-text">"I just wanted to take a moment to appreciate the bed availability services. It was truly a great experience. The process was smooth, well-organized, and very efficient. It made a stressful situation much easier to handle. Thank you for providing such reliable and commendable service."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background: #e2e8f0; color: #475569; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 50%; font-size: 1.2rem;">S</div>
+            <div>
+              <div class="testimonial-name">Sakshi Shukla</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal d2">
+          <div class="testimonial-stars" style="color: #fbbc04;">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Thanks Life First for good female attendent for my mother. Got ventilator on time.. Thank you very much.."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background: #e2e8f0; color: #475569; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 50%; font-size: 1.2rem;">D</div>
+            <div>
+              <div class="testimonial-name">Divyanshi Mishra</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA SECTION ===================== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-inner">
+        <h2>Ready to Experience Quality Home Healthcare?</h2>
+        <p>Book your free consultation today. Our care coordinator will understand your needs and create a personalized plan — at no cost.</p>
+        <div class="cta-buttons">
+          <a href="#contact" class="btn btn-white btn-lg"><i class="fas fa-calendar-check"></i> Book Free Consultation</a>
+          <a href="tel:+919870086074" class="btn btn-outline-white btn-lg"><i class="fas fa-phone"></i> +91 98700 86074</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="section why-section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label"><i class="fas fa-paper-plane"></i> Get In Touch</span>
+        <h2 class="section-title">We're Here to <span class="highlight">Help You</span></h2>
+        <p class="section-desc">Have questions? Ready to book? Our care coordinator will respond within 30 minutes.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info-stack reveal">
+          <div class="contact-card">
+            <div class="contact-card-icon"><i class="fas fa-location-dot"></i></div>
+            <div>
+              <h4>Our Office</h4>
+              <p>near Durga Mata Mandir Road, Sector 4,<br>Airoli, Navi Mumbai, Maharashtra 400708</p>
+              <a href="https://www.google.com/maps/search/?api=1&query=near+Durga+Mata+Mandir+Road,+Sector+4,+Airoli,+Navi+Mumbai,+Maharashtra+400708" target="_blank" rel="noopener" style="color: var(--primary); font-size: 0.85rem; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; margin-top: 5px;" onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">
+                Get Directions <i class="fas fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
+              </a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <h4>Call Us</h4>
+              <a href="tel:+917081969496">+91 70819 69496</a><br>
+              <a href="tel:+919870086074">+91 98700 86074</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:lifefirsthealthcareservices@gmail.com">lifefirsthealthcareservices@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <h4>Working Hours</h4>
+              <p>24/7 — Always available for your healthcare needs</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-box reveal d2">
+          <h3>Life First Callback Request</h3>
+          <p class="form-subtitle">Fill the form and we'll reach out within 30 minutes.</p>
+          <form onsubmit="handleFormSubmit(event)" id="contactForm">
+            <div class="form-row">
+              <div class="form-floating">
+                <input type="text" id="name" name="name" class="form-control" placeholder=" " required />
+                <label for="name">Full Name *</label>
+                <i class="fas fa-user input-icon"></i>
+              </div>
+              <div class="form-floating">
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder=" " required />
+                <label for="phone">Phone Number *</label>
+                <i class="fas fa-phone input-icon"></i>
+              </div>
+            </div>
+            <div class="form-floating">
+              <input type="email" id="email" name="email" class="form-control" placeholder=" " />
+              <label for="email">Email Address</label>
+              <i class="fas fa-envelope input-icon"></i>
+            </div>
+            <div class="form-floating">
+              <select id="service" name="service" class="form-control" required>
+                <option value="" disabled selected hidden></option>
+                <option value="elder-care">Elder Care</option>
+                <option value="nursing">Nursing Care at Home</option>
+                <option value="physio">Physiotherapy at Home</option>
+                <option value="icu">ICU at Home</option>
+                <option value="equipment">Medical Equipment Rental/Sale</option>
+                <option value="nutrition">Nutrition Consultation</option>
+                <option value="attendant">Trained Patient Attendant</option>
+                <option value="other">Other</option>
+              </select>
+              <label for="service">Service Required *</label>
+              <i class="fas fa-briefcase-medical input-icon"></i>
+            </div>
+            <div class="form-floating">
+              <textarea id="message" name="message" class="form-control" rows="3" placeholder=" "></textarea>
+              <label for="message">Tell us about the patient's condition...</label>
+              <i class="fas fa-comment-medical input-icon" style="top: 24px; transform: none;"></i>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+              <i class="fas fa-paper-plane"></i> Submit Request
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="logo footer-logo">
+            <img src="./assets/images/real-logo.jpg" alt="Life First Healthcare" loading="lazy" />
+          </a>
+          <p>Life First Healthcare brings quality, compassionate medical care to your doorstep. Professional healthcare that's accessible, affordable, and patient-centric.</p>
+          <p class="tagline">Care. Compassion. Life First.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/lifefirst.24/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@LifeFirstHealthcare" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#" onclick="openPaymentModal(event)" style="font-weight: 600;"><i class="fas fa-qrcode" style="margin-right: 4px;"></i> Pay Online (UPI)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Our Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Elder Care</a></li>
+            <li><a href="#services">Nursing Care</a></li>
+            <li><a href="#services">Physiotherapy</a></li>
+            <li><a href="#services">ICU at Home</a></li>
+            <li><a href="#services">Medical Equipment</a></li>
+            <li><a href="#services">Nutrition</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact Info</h4>
+          <div class="footer-contact-item">
+            <i class="fas fa-location-dot"></i>
+            <span>
+              near Durga Mata Mandir Road, Sector 4, Airoli, Navi Mumbai 400708<br>
+              <a href="https://www.google.com/maps/search/?api=1&query=near+Durga+Mata+Mandir+Road,+Sector+4,+Airoli,+Navi+Mumbai,+Maharashtra+400708" target="_blank" rel="noopener" style="color: #6ee7b7; font-size: 0.8rem; text-decoration: underline; margin-top: 3px; display: inline-block;">View on Google Maps</a>
+            </span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-phone"></i>
+            <span>+91 98700 86074</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>lifefirsthealthcareservices@gmail.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-clock"></i>
+            <span>24/7 Available</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Life First Healthcare Services All Rights Reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="#">Refund Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== FLOATING BUTTONS ===================== -->
+  <div class="whatsapp-float">
+    <a href="https://wa.me/919870086074?text=Hello,%20I'm%20interested%20in%20your%20home%20healthcare%20services.%20Please%20guide%20me." target="_blank" class="whatsapp-btn" aria-label="Chat on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- ===================== PAYMENT MODAL ===================== -->
+  <div class="modal-overlay" id="paymentModal">
+    <div class="payment-modal-card">
+      <button type="button" class="modal-close-btn" onclick="closePaymentModal()" aria-label="Close modal">&times;</button>
+      <div class="payment-modal-header">
+        <i class="fas fa-shield-halved" style="color: #00A86B; font-size: 2.2rem; margin-bottom: 12px;"></i>
+        <h3>Secure UPI Payment</h3>
+        <p>Life First Healthcare Services</p>
+      </div>
+      <div class="payment-modal-body">
+        <div class="qr-container">
+          <img src="./assets/images/qr-code.jpg" alt="UPI QR Code - Scan to Pay" loading="lazy" />
+        </div>
+        <div class="payment-details">
+          <div class="upi-id-box">
+            <div class="upi-text-wrap">
+              <span class="label">UPI ID</span>
+              <span class="value" id="upiIdText">lifefirsthealthcareservices@okicici</span>
+            </div>
+            <button type="button" class="copy-btn" onclick="copyUpiId()" title="Copy UPI ID">
+              <i class="far fa-copy"></i> Copy
+            </button>
+          </div>
+          <p class="payment-instruction">
+            Scan the QR code with any UPI app (Google Pay, PhonePe, Paytm, BHIM, etc.) or copy the UPI ID to make a secure payment.
+          </p>
+          <div class="secure-badges">
+            <span><i class="fas fa-check-double"></i> Instantly Credited</span>
+            <span><i class="fas fa-lock"></i> 100% Safe Payment</span>
+          </div>
+          
+          <div style="margin-top: 15px; text-align: center; font-size: 0.85rem;">
+            By proceeding, you agree to our <a href="terms.html" target="_blank" style="color: var(--primary); text-decoration: underline; font-weight: 500;">Payment Terms and Conditions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== JAVASCRIPT ===================== -->
+  <script>
+    // === DOM Elements ===
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    const navOverlay = document.getElementById('navOverlay');
+    const header = document.getElementById('header');
+    const backToTop = document.getElementById('backToTop');
+
+    // === Mobile Navigation ===
+    function toggleMenu(open) {
+      const isOpen = open !== undefined ? open : !navLinks.classList.contains('open');
+      menuToggle.classList.toggle('active', isOpen);
+      menuToggle.setAttribute('aria-expanded', isOpen);
+      navLinks.classList.toggle('open', isOpen);
+      navOverlay.classList.toggle('active', isOpen);
+      const isModalOpen = document.getElementById('paymentModal').classList.contains('active');
+      document.body.style.overflow = (isOpen || isModalOpen) ? 'hidden' : '';
+    }
+
+    menuToggle.addEventListener('click', () => toggleMenu());
+    menuToggle.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleMenu();
+      }
+    });
+    navOverlay.addEventListener('click', () => toggleMenu(false));
+    navLinks.querySelectorAll('a:not(.dropdown-toggle)').forEach(link =>
+      link.addEventListener('click', () => toggleMenu(false))
+    );
+
+    // Clear mobile menu state on window resize (e.g. tablet rotation)
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768 && navLinks.classList.contains('open')) {
+        toggleMenu(false);
+      }
+    });
+
+    // Mobile dropdown
+    document.querySelectorAll('.dropdown').forEach(dd => {
+      dd.querySelector('.dropdown-toggle').addEventListener('click', e => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          dd.classList.toggle('active');
+        }
+      });
+    });
+
+    // === Performance Optimized Scroll (60fps) ===
+    const sections = document.querySelectorAll('section[id]');
+    const heroBg = document.querySelector('.hero-bg');
+    let scrollTicking = false;
+
+    window.addEventListener('scroll', () => {
+      if (!scrollTicking) {
+        window.requestAnimationFrame(() => {
+          // 1. Sticky Header & Back to Top
+          const y = window.scrollY;
+          header.classList.toggle('scrolled', y > 40);
+          backToTop.classList.toggle('visible', y > 500);
+
+          // 2. Hero Parallax Effect
+          if (heroBg && y < window.innerHeight) {
+            heroBg.style.transform = `translate3d(0, ${y * 0.3}px, 0)`;
+          }
+
+          // 3. Active Nav Highlighting
+          const navY = y + 120;
+          sections.forEach(s => {
+            const match = navY >= s.offsetTop && navY < s.offsetTop + s.offsetHeight;
+            const link = document.querySelector(`.nav-links a[href="#${s.id}"]`);
+            if (link) link.classList.toggle('active', match);
+          });
+
+          scrollTicking = false;
+        });
+        scrollTicking = true;
+      }
+    }, { passive: true });
+
+    // === Back to Top ===
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // === Smooth Scroll ===
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (href === '#' || !href) {
+          e.preventDefault();
+          return;
+        }
+        try {
+          const t = document.querySelector(href);
+          if (t) {
+            e.preventDefault();
+            // Calculate header height dynamically to offset the scroll target position
+            const headerElement = document.getElementById('header');
+            const headerHeight = headerElement ? headerElement.offsetHeight : 80;
+            const targetPos = t.getBoundingClientRect().top + window.scrollY - headerHeight;
+            window.scrollTo({
+              top: targetPos,
+              behavior: 'smooth'
+            });
+          }
+        } catch (err) {
+          console.warn("Smooth scroll selector warning:", err);
+        }
+      });
+    });
+
+
+    // === Scroll Reveal ===
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // === Counter Animation ===
+    function animateValue(el, target, suffix = '+', decimals = 0) {
+      if (!el) return;
+      let current = 0;
+      const step = target / 50;
+      const timer = setInterval(() => {
+        current += step;
+        if (current >= target) { current = target; clearInterval(timer); }
+        el.textContent = (decimals ? current.toFixed(1) : Math.floor(current).toLocaleString()) + suffix;
+      }, 35);
+    }
+
+    const heroObs = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) {
+        animateValue(document.getElementById('statPatients'), 2000, '+');
+        animateValue(document.getElementById('statProfessionals'), 200, '+');
+        animateValue(document.getElementById('statRating'), 4.8, '★', 1);
+        heroObs.disconnect();
+      }
+    }, { threshold: 0.25 });
+    heroObs.observe(document.getElementById('home'));
+
+    // === Form Submit (Dual Integration: WhatsApp + FormSubmit.co Email) ===
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      
+      const form = e.target;
+      const btn = form.querySelector('button[type="submit"]');
+      if (btn.disabled) return; // Prevent double submission
+      
+      const orig = btn.innerHTML;
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+      btn.disabled = true;
+
+      // Collect form data safely to prevent any javascript crash
+      const name = form.name ? form.name.value : 'Not provided';
+      const phone = form.phone ? form.phone.value : 'Not provided';
+      const email = (form.email && form.email.value) ? form.email.value : 'Not provided';
+      
+      let service = 'Not selected';
+      if (form.service && form.service.selectedIndex >= 0) {
+        service = form.service.options[form.service.selectedIndex].text;
+      }
+      
+      const message = (form.message && form.message.value) ? form.message.value : 'No additional message';
+
+      // 1. Send Email silently in the background via FormSubmit.co AJAX (Works on local and live sites)
+      const formData = new FormData(form);
+      formData.append("_captcha", "false");
+      formData.append("_subject", "New Callback Request! - Life First Healthcare");
+
+      fetch("https://formsubmit.co/ajax/lifefirsthealthcareservices@gmail.com", {
+        method: "POST",
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(response => response.json())
+      .then(data => console.log("FormSubmit email sent successfully:", data))
+      .catch(err => console.error("FormSubmit email failed in background:", err));
+
+      // 2. Prepare WhatsApp Request
+      const targetPhone = "919870086074";
+      const waMessage = `*Life First Callback Request!* 🚨\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Email:* ${email}\n*Service Needed:* ${service}\n*Message:* ${message}`;
+      const waUrl = `https://wa.me/${targetPhone}?text=${encodeURIComponent(waMessage)}`;
+
+      // 3. Open WhatsApp in a new tab (so the website stays open)
+      const waWindow = window.open(waUrl, '_blank');
+      if (!waWindow) {
+        window.location.href = waUrl;
+      }
+
+      // Success UI Feedback
+      setTimeout(() => {
+        btn.innerHTML = '<i class="fas fa-check-circle"></i> Request Sent!';
+        btn.style.background = '#25D366';
+        btn.style.borderColor = '#25D366';
+        form.reset();
+        
+        setTimeout(() => {
+          btn.innerHTML = orig;
+          btn.style.background = '';
+          btn.style.borderColor = '';
+          btn.disabled = false;
+        }, 4000);
+      }, 1000);
+    }
+
+    // === Payment Modal Handling ===
+    const paymentModal = document.getElementById('paymentModal');
+
+    function openPaymentModal(e) {
+      if (e) e.preventDefault();
+      paymentModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePaymentModal() {
+      paymentModal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Close on click outside
+    paymentModal.addEventListener('click', (e) => {
+      if (e.target === paymentModal) {
+        closePaymentModal();
+      }
+    });
+
+    // Close modals on Escape key press (A11y/UX fix)
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (paymentModal.classList.contains('active')) closePaymentModal();
+        if (navLinks.classList.contains('open')) toggleMenu(false);
+      }
+    });
+
+    // Copy UPI ID function
+    function copyUpiId() {
+      const upiText = document.getElementById('upiIdText').textContent;
+      navigator.clipboard.writeText(upiText).then(() => {
+        const copyBtn = document.querySelector('.upi-id-box .copy-btn');
+        const origText = copyBtn.innerHTML;
+        copyBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+        copyBtn.style.background = '#00A86B';
+        copyBtn.style.color = '#fff';
+        copyBtn.style.borderColor = '#00A86B';
+        setTimeout(() => {
+          copyBtn.innerHTML = origText;
+          copyBtn.style.background = '';
+          copyBtn.style.color = '';
+          copyBtn.style.borderColor = '';
+        }, 2000);
+      }).catch(err => {
+        console.error('Failed to copy text: ', err);
+      });
+    }
+  </script>
+
+
+
+</body>
+</html>

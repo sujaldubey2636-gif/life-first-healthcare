@@ -996,17 +996,18 @@
       btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
       btn.disabled = true;
 
-      // Collect form data safely to prevent any javascript crash
-      const name = form.name ? form.name.value : 'Not provided';
-      const phone = form.phone ? form.phone.value : 'Not provided';
-      const email = (form.email && form.email.value) ? form.email.value : 'Not provided';
+      // Collect form data safely using form.elements to prevent native property collisions
+      const name = form.elements['name'] ? form.elements['name'].value : 'Not provided';
+      const phone = form.elements['phone'] ? form.elements['phone'].value : 'Not provided';
+      const email = (form.elements['email'] && form.elements['email'].value) ? form.elements['email'].value : 'Not provided';
       
       let service = 'Not selected';
-      if (form.service && form.service.selectedIndex >= 0) {
-        service = form.service.options[form.service.selectedIndex].text;
+      const serviceSelect = form.elements['service'];
+      if (serviceSelect && serviceSelect.selectedIndex >= 0) {
+        service = serviceSelect.options[serviceSelect.selectedIndex].text;
       }
       
-      const message = (form.message && form.message.value) ? form.message.value : 'No additional message';
+      const message = (form.elements['message'] && form.elements['message'].value) ? form.elements['message'].value : 'No additional message';
 
       // 1. Prepare Form Data for Email Submission
       const formData = new FormData(form);

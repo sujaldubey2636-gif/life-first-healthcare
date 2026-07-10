@@ -2135,6 +2135,45 @@ h1, h2, h3, h4, h5, h6 {
   gap: var(--sp-6);
 }
 
+/* Creator Credit Styling */
+.creator-credit {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: var(--text-xs);
+}
+
+.creator-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #00bcd4; /* Branded cyan color */
+  transition: all var(--t-base);
+}
+
+.creator-link:hover {
+  color: #00e5ff;
+  opacity: 0.9;
+}
+
+.creator-logo {
+  height: 20px;
+  width: auto;
+  border-radius: 4px;
+  object-fit: contain;
+  vertical-align: middle;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1px;
+  background: white;
+}
+
+.creator-name {
+  letter-spacing: 0.8px;
+}
+
 /* ====================================
    FLOATING ELEMENTS
    ==================================== */

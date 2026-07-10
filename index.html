@@ -654,7 +654,11 @@
         <div class="contact-form-box reveal d2">
           <h3>Life First Callback Request</h3>
           <p class="form-subtitle">Fill the form and we'll reach out within 30 minutes.</p>
-          <form onsubmit="handleFormSubmit(event)" id="contactForm">
+          <form action="https://formsubmit.co/lifefirsthealthcareservices@gmail.com" method="POST" onsubmit="handleFormSubmit(event)" id="contactForm">
+            <!-- FormSubmit Configuration -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="New Callback Request! - Life First Healthcare">
+            <input type="hidden" name="_next" id="formSubmitNext" value="">
             <div class="form-row">
               <div class="form-floating">
                 <input type="text" id="name" name="name" class="form-control" placeholder=" " required />
@@ -984,16 +988,13 @@
     }, { threshold: 0.25 });
     heroObs.observe(document.getElementById('home'));
 
-    // === Form Submit (Dual Integration: WhatsApp + FormSubmit.co Email) ===
+    // === Form Submit (Dual Integration: Native FormSubmit.co Email + WhatsApp Redirect) ===
     function handleFormSubmit(e) {
-      e.preventDefault();
-      
       const form = e.target;
       const btn = form.querySelector('button[type="submit"]');
       if (btn.disabled) return; // Prevent double submission
       
-      const orig = btn.innerHTML;
-      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
       btn.disabled = true;
 
       // Collect form data safely to prevent any javascript crash
@@ -1008,45 +1009,19 @@
       
       const message = (form.message && form.message.value) ? form.message.value : 'No additional message';
 
-      // 1. Send Email silently in the background via FormSubmit.co AJAX (Works on local and live sites)
-      const formData = new FormData(form);
-      formData.append("_captcha", "false");
-      formData.append("_subject", "New Callback Request! - Life First Healthcare");
-
-      fetch("https://formsubmit.co/ajax/lifefirsthealthcareservices@gmail.com", {
-        method: "POST",
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      })
-      .then(response => response.json())
-      .then(data => console.log("FormSubmit email sent successfully:", data))
-      .catch(err => console.error("FormSubmit email failed in background:", err));
-
-      // 2. Prepare WhatsApp Request
+      // 1. Prepare WhatsApp Request URL
       const targetPhone = "919870086074";
       const waMessage = `*Life First Callback Request!* 🚨\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Email:* ${email}\n*Service Needed:* ${service}\n*Message:* ${message}`;
       const waUrl = `https://wa.me/${targetPhone}?text=${encodeURIComponent(waMessage)}`;
 
-      // 3. Open WhatsApp in a new tab (so the website stays open)
-      const waWindow = window.open(waUrl, '_blank');
-      if (!waWindow) {
-        window.location.href = waUrl;
+      // 2. Set the redirect URL in FormSubmit config
+      const nextInput = document.getElementById('formSubmitNext');
+      if (nextInput) {
+        nextInput.value = waUrl;
       }
 
-      // Success UI Feedback
-      setTimeout(() => {
-        btn.innerHTML = '<i class="fas fa-check-circle"></i> Request Sent!';
-        btn.style.background = '#25D366';
-        btn.style.borderColor = '#25D366';
-        form.reset();
-        
-        setTimeout(() => {
-          btn.innerHTML = orig;
-          btn.style.background = '';
-          btn.style.borderColor = '';
-          btn.disabled = false;
-        }, 4000);
-      }, 1000);
+      // We do NOT prevent default. The browser will natively POST the data to FormSubmit.co
+      // and FormSubmit.co will automatically redirect the user to the WhatsApp chat!
     }
 
     // === Payment Modal Handling ===

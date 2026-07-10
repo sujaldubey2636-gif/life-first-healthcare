@@ -995,7 +995,6 @@
       if (btn.disabled) return; // Prevent double submission
       
       btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
-      btn.disabled = true;
 
       // Collect form data safely to prevent any javascript crash
       const name = form.name ? form.name.value : 'Not provided';

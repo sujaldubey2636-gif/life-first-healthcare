@@ -654,11 +654,7 @@
         <div class="contact-form-box reveal d2">
           <h3>Life First Callback Request</h3>
           <p class="form-subtitle">Fill the form and we'll reach out within 30 minutes.</p>
-          <form action="https://formsubmit.co/lifefirsthealthcareservices@gmail.com" method="POST" onsubmit="handleFormSubmit(event)" id="contactForm">
-            <!-- FormSubmit Configuration -->
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_subject" value="New Callback Request! - Life First Healthcare">
-            <input type="hidden" name="_next" id="formSubmitNext" value="">
+          <form onsubmit="handleFormSubmit(event)" id="contactForm">
             <div class="form-row">
               <div class="form-floating">
                 <input type="text" id="name" name="name" class="form-control" placeholder=" " required />
@@ -990,11 +986,15 @@
 
     // === Form Submit (Dual Integration: Native FormSubmit.co Email + WhatsApp Redirect) ===
     function handleFormSubmit(e) {
+      e.preventDefault();
+      
       const form = e.target;
       const btn = form.querySelector('button[type="submit"]');
       if (btn.disabled) return; // Prevent double submission
       
+      const orig = btn.innerHTML;
       btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+      btn.disabled = true;
 
       // Collect form data safely to prevent any javascript crash
       const name = form.name ? form.name.value : 'Not provided';
@@ -1008,19 +1008,29 @@
       
       const message = (form.message && form.message.value) ? form.message.value : 'No additional message';
 
-      // 1. Prepare WhatsApp Request URL
+      // 1. Prepare Form Data for Email Submission
+      const formData = new FormData(form);
+      formData.append("_captcha", "false");
+      formData.append("_subject", "New Callback Request! - Life First Healthcare");
+
+      // 2. Prepare WhatsApp Request URL
       const targetPhone = "919870086074";
       const waMessage = `*Life First Callback Request!* 🚨\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Email:* ${email}\n*Service Needed:* ${service}\n*Message:* ${message}`;
       const waUrl = `https://wa.me/${targetPhone}?text=${encodeURIComponent(waMessage)}`;
 
-      // 2. Set the redirect URL in FormSubmit config
-      const nextInput = document.getElementById('formSubmitNext');
-      if (nextInput) {
-        nextInput.value = waUrl;
-      }
+      // 3. Send Email silently in the background (keepalive ensures it finishes even after redirect)
+      fetch("https://formsubmit.co/ajax/lifefirsthealthcareservices@gmail.com", {
+        method: "POST",
+        body: formData,
+        headers: { 'Accept': 'application/json' },
+        keepalive: true
+      })
+      .then(response => response.json())
+      .then(data => console.log("Background email sent successfully:", data))
+      .catch(err => console.error("Background email failed:", err));
 
-      // We do NOT prevent default. The browser will natively POST the data to FormSubmit.co
-      // and FormSubmit.co will automatically redirect the user to the WhatsApp chat!
+      // 4. Instantly redirect the page to WhatsApp (cannot be blocked by popup blockers)
+      window.location.href = waUrl;
     }
 
     // === Payment Modal Handling ===

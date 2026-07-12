@@ -2024,6 +2024,13 @@ h1, h2, h3, h4, h5, h6 {
   gap: var(--sp-3);
 }
 
+.footer-logo img {
+  width: 160px;
+  background: white;
+  border-radius: 12px;
+  padding: 12px;
+}
+
 .footer-social a {
   width: 38px;
   height: 38px;
@@ -2314,8 +2321,8 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
   .top-bar { display: none; } /* Hide top-bar entirely on mobile to save vertical height */
-  .navbar { height: 70px; } /* Reduce header height from 120px to 70px */
-  .logo img { height: 48px; } /* Scale logo height down from 95px to 48px */
+  .navbar { height: 80px; } /* Increased header height for better logo visibility */
+  .logo img { height: 64px; } /* Scale logo height up to 64px */
   .section { padding: var(--sp-16) 0; } /* Reduce section padding from 96px to 64px */
 
   .menu-toggle { display: flex; }

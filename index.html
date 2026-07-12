@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="./assets/css/styles.css?v=13" />
+  <link rel="stylesheet" href="./assets/css/styles.css?v=14" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="./assets/images/logo.png" />
@@ -845,10 +845,12 @@
     // === Mobile Navigation ===
     function toggleMenu(open) {
       const isOpen = open !== undefined ? open : !navLinks.classList.contains('open');
-      menuToggle.classList.toggle('active', isOpen);
-      menuToggle.setAttribute('aria-expanded', isOpen);
-      navLinks.classList.toggle('open', isOpen);
-      navOverlay.classList.toggle('active', isOpen);
+      window.requestAnimationFrame(() => {
+        menuToggle.classList.toggle('active', isOpen);
+        menuToggle.setAttribute('aria-expanded', isOpen);
+        navLinks.classList.toggle('open', isOpen);
+        navOverlay.classList.toggle('active', isOpen);
+      });
     }
 
     menuToggle.addEventListener('click', () => toggleMenu());

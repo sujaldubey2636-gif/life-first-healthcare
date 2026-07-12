@@ -2331,7 +2331,8 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--white);
     flex-direction: column;
     padding: 80px var(--sp-5) var(--sp-6);
-    box-shadow: var(--shadow-2xl);
+    box-shadow: none;
+    border-left: 1px solid rgba(0,0,0,0.05);
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     will-change: transform;
     z-index: 100;
@@ -2409,6 +2410,7 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.4s ease, visibility 0.4s ease;
+    will-change: opacity;
   }
 
   .nav-overlay.active { opacity: 1; visibility: visible; }

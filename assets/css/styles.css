@@ -2646,8 +2646,76 @@ h1, h2, h3, h4, h5, h6 {
   color: #00A86B;
 }
 
+/* Responsive adjustments for Payment Modal and Booking Card */
 @media (max-width: 480px) {
+  .modal-overlay {
+    padding: var(--sp-3); /* Reduce outer padding from 20px to 12px */
+  }
+  
   .payment-modal-card {
-    padding: var(--sp-6);
+    padding: var(--sp-6) var(--sp-5); /* Compact padding */
+    border-radius: var(--r-2xl); /* Slightly smaller border radius */
+    max-width: 380px; /* Avoid side clamping */
+  }
+
+  .qr-container {
+    max-width: 180px; /* Make QR code fit better on mobile screens */
+    padding: 12px;
+    margin-bottom: var(--sp-4);
+  }
+
+  .booking-card {
+    padding: var(--sp-6) var(--sp-5); /* Adjust booking card padding for mobile */
+  }
+  
+  .booking-card-header {
+    margin-bottom: var(--sp-4);
+    padding-bottom: var(--sp-4);
+  }
+}
+
+@media (max-width: 400px) {
+  .upi-id-box {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--sp-3);
+    text-align: center;
+    padding: var(--sp-3);
+  }
+
+  .upi-text-wrap {
+    align-items: center;
+    width: 100%;
+  }
+
+  .upi-id-box .value {
+    text-align: center;
+    font-size: 0.8rem;
+    white-space: normal;
+    word-break: break-all; /* Break long UPI ID safely on small screens */
+    width: 100%;
+  }
+
+  .upi-id-box .copy-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 8px var(--sp-4); /* Larger touch target */
+  }
+
+  .secure-badges {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 350px) {
+  .payment-modal-card {
+    padding: var(--sp-4);
+  }
+  
+  .qr-container {
+    max-width: 160px;
+    padding: 8px;
   }
 }

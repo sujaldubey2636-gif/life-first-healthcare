@@ -2700,6 +2700,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
+    display: flex !important;
   }
   
   .payment-modal-card {
@@ -2707,12 +2708,13 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: var(--r-2xl);
     max-width: 360px !important;
     width: 100% !important;
-    margin: 0 !important; /* Let flexbox center it, remove margin auto */
-    max-height: 90vh;
+    margin: auto !important; /* margin:auto is required for safe flex centering */
+    max-height: 85vh; /* slightly shorter to ensure it fits small screens */
     overflow-y: auto;
     box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
-    transform: scale(0.95) !important; /* Removed translateY to fix spawning issues */
-    transition: all 0.3s ease !important;
+    transform-origin: center center;
+    transform: scale(0.95) !important;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
   }
 
   .payment-modal-card::after {

@@ -2696,28 +2696,96 @@ h1, h2, h3, h4, h5, h6 {
 /* Responsive adjustments for Payment Modal and Booking Card */
 @media (max-width: 480px) {
   .modal-overlay {
-    padding: var(--sp-3); /* Reduce outer padding from 20px to 12px */
+    padding: 0; /* No outer padding — make it full-screen */
+    align-items: stretch;
   }
   
   .payment-modal-card {
-    padding: var(--sp-6) var(--sp-5); /* Compact padding */
-    border-radius: var(--r-2xl); /* Slightly smaller border radius */
-    max-width: 380px; /* Avoid side clamping */
+    padding: var(--sp-6) var(--sp-5);
+    border-radius: var(--r-2xl) var(--r-2xl) 0 0; /* Rounded top only */
+    max-width: 100%;
+    margin: auto 0 0 0; /* Pin to bottom like a mobile sheet */
+    max-height: 95vh;
+    overflow-y: auto;
+  }
+
+  .modal-overlay.active .payment-modal-card {
+    transform: translateY(0) scale(1);
+  }
+
+  .payment-modal-header {
+    margin-bottom: var(--sp-4);
+    padding-bottom: var(--sp-3);
+  }
+
+  .payment-modal-header i {
+    font-size: 1.8rem !important;
+    margin-bottom: 8px !important;
+  }
+
+  .payment-modal-header h3 {
+    font-size: 1.15rem;
+  }
+
+  .payment-modal-header p {
+    font-size: 0.8rem;
   }
 
   .qr-container {
-    max-width: 180px; /* Make QR code fit better on mobile screens */
-    padding: 12px;
+    max-width: 170px;
+    padding: 10px;
+    margin-bottom: var(--sp-4);
+  }
+
+  .payment-instruction {
+    font-size: 0.8rem;
     margin-bottom: var(--sp-4);
   }
 
   .booking-card {
-    padding: var(--sp-6) var(--sp-5); /* Adjust booking card padding for mobile */
+    padding: var(--sp-6) var(--sp-5);
   }
   
   .booking-card-header {
     margin-bottom: var(--sp-4);
     padding-bottom: var(--sp-4);
+  }
+
+  /* Contact form tighter spacing on mobile */
+  .contact-grid {
+    gap: var(--sp-6);
+  }
+
+  .contact-card {
+    padding: var(--sp-4);
+    gap: var(--sp-3);
+  }
+
+  .contact-card-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .contact-card h4 {
+    font-size: 0.85rem;
+  }
+
+  .contact-card p,
+  .contact-card a {
+    font-size: 0.82rem;
+  }
+
+  .contact-form-box h3 {
+    font-size: var(--text-xl);
+  }
+
+  .contact-form-box .form-subtitle {
+    margin-bottom: var(--sp-5);
+  }
+
+  .form-floating {
+    margin-bottom: var(--sp-4);
   }
 }
 
@@ -2739,14 +2807,14 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     font-size: 0.8rem;
     white-space: normal;
-    word-break: break-all; /* Break long UPI ID safely on small screens */
+    word-break: break-all;
     width: 100%;
   }
 
   .upi-id-box .copy-btn {
     width: 100%;
     justify-content: center;
-    padding: 8px var(--sp-4); /* Larger touch target */
+    padding: 8px var(--sp-4);
   }
 
   .secure-badges {
@@ -2762,7 +2830,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   .qr-container {
-    max-width: 160px;
+    max-width: 150px;
     padding: 8px;
   }
 }

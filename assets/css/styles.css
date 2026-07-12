@@ -2333,24 +2333,25 @@ h1, h2, h3, h4, h5, h6 {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 88%;
-    max-width: 380px;
+    width: 82%;
+    max-width: 340px;
     height: 100vh;
     background: var(--white);
     flex-direction: column;
-    padding: 90px var(--sp-6) var(--sp-8);
+    padding: 80px var(--sp-5) var(--sp-6);
     box-shadow: var(--shadow-2xl);
     transition: right var(--t-base);
     z-index: 100;
     overflow-y: auto;
     align-items: stretch;
+    gap: 0;
   }
 
   .nav-links.open { right: 0; }
 
   .nav-links > li > a {
-    padding: 14px 16px;
-    font-size: var(--text-base);
+    padding: 12px 14px;
+    font-size: 0.95rem;
     border-bottom: 1px solid var(--gray-100);
     border-radius: 0;
   }
@@ -2379,25 +2380,32 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
   }
 
+  /* Pay Online button — styled as a compact pill inside the sidebar */
+  .nav-pay-btn {
+    margin: 4px 14px;
+    border-radius: 50px !important;
+    text-align: center;
+    justify-content: center;
+    font-size: 0.9rem !important;
+    padding: 10px 16px !important;
+  }
+
+  /* CTA section at the bottom of the sidebar — separated with a divider */
   .mobile-nav-cta {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-top: 15px;
-    padding: 0 16px;
+    gap: 8px;
+    margin-top: 12px;
+    padding: 14px 14px 0;
+    border-top: 1px solid var(--gray-200);
   }
 
   .mobile-nav-cta .btn {
     width: 100%;
     text-align: center;
     justify-content: center;
-  }
-
-  .nav-pay-btn {
-    margin: 5px 16px;
-    border-radius: 50px !important;
-    text-align: center;
-    justify-content: center;
+    padding: 10px 16px;
+    font-size: 0.9rem;
   }
 
   .nav-overlay {

@@ -2322,8 +2322,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
-  .top-bar-left { display: none; }
-  .top-bar-right { margin: 0 auto; }
+  .top-bar { display: none; } /* Hide top-bar entirely on mobile to save vertical height */
+  .navbar { height: 70px; } /* Reduce header height from 120px to 70px */
+  .logo img { height: 48px; } /* Scale logo height down from 95px to 48px */
+  .section { padding: var(--sp-16) 0; } /* Reduce section padding from 96px to 64px */
 
   .menu-toggle { display: flex; }
 
@@ -2428,9 +2430,46 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 480px) {
+  .section { padding: var(--sp-12) 0; } /* Reduce section padding to 48px on mobile */
+  
+  .section-title { font-size: var(--text-2xl) !important; } /* Smaller headings on mobile */
+  .section-desc { font-size: var(--text-sm); } /* Smaller description text */
+  
   .hero { min-height: 75vh; }
+  .hero h1 { font-size: 2.25rem !important; }
+  .hero-subtitle { font-size: var(--text-base); margin-bottom: var(--sp-6); }
+  .hero-ekg { bottom: 20px; }
+  
+  .hero-cta { flex-direction: column; gap: var(--sp-3); width: 100%; }
+  .hero-cta .btn { width: 100%; text-align: center; justify-content: center; }
+
   .steps-grid { grid-template-columns: 1fr; }
-  .trust-item { min-width: 100%; }
+  .step-card { padding: var(--sp-6) var(--sp-4); }
+
+  /* 2x2 Trust Strip Layout instead of single column stack */
+  .trust-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-3); }
+  .trust-item { min-width: auto; padding: var(--sp-3) var(--sp-4); gap: var(--sp-3); }
+  .trust-item-icon { width: 36px; height: 36px; font-size: 0.8rem; }
+  .trust-item-value { font-size: var(--text-base); }
+  .trust-item-label { font-size: var(--text-2xs); }
+
+  /* Scale down about collage */
+  .about-img-main { height: 320px; }
+  .about-img-float { width: 130px; bottom: -15px; right: 10px; }
+  .about-img-float img { height: 130px; }
+  .about-experience-badge { left: 10px; top: -10px; padding: 6px 10px; }
+  .about-experience-badge .num { font-size: var(--text-lg); }
+  .about-experience-badge .txt { font-size: 0.65rem; }
+
+  /* Scale down card padding to give fields more room */
+  .service-card-body { padding: var(--sp-5); }
+  .why-card { padding: var(--sp-6) var(--sp-4); }
+  .testimonial-card { padding: var(--sp-6); }
+  .contact-form-box { padding: var(--sp-6) var(--sp-4); }
+  
+  /* Footer elements spacing */
+  .footer-bottom-links { justify-content: center; flex-wrap: wrap; gap: var(--sp-3) var(--sp-4); }
+  .creator-credit { flex-direction: column; text-align: center; gap: 6px; }
 }
 
 /* === Payment Modal Styles === */

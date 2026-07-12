@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="./assets/css/styles.css?v=5" />
+  <link rel="stylesheet" href="./assets/css/styles.css?v=6" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="./assets/images/logo.png" />
@@ -789,8 +789,8 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- ===================== PAYMENT MODAL ===================== -->
-  <div class="modal-overlay" id="paymentModal">
+  <!-- ===================== PAYMENT MODAL (Native Dialog) ===================== -->
+  <dialog id="paymentModal" class="payment-dialog">
     <div class="payment-modal-card">
       <button type="button" class="modal-close-btn" onclick="closePaymentModal()" aria-label="Close modal">&times;</button>
       <div class="payment-modal-header">
@@ -826,7 +826,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </dialog>
 
   <!-- ===================== JAVASCRIPT ===================== -->
   <script>
@@ -1026,7 +1026,7 @@
 
     // === Payment Modal Handling ===
     const paymentModal = document.getElementById('paymentModal');
-
+    
     function openPaymentModal(e) {
       if (e) e.preventDefault();
       
@@ -1035,18 +1035,24 @@
         toggleMenu(false);
       }
       
-      paymentModal.classList.add('active');
+      paymentModal.showModal();
       document.body.style.overflow = 'hidden';
     }
 
     function closePaymentModal() {
-      paymentModal.classList.remove('active');
+      paymentModal.close();
       document.body.style.overflow = '';
     }
 
-    // Close on click outside
+    // Close when clicking outside the dialog card
     paymentModal.addEventListener('click', (e) => {
-      if (e.target === paymentModal) {
+      const dialogDimensions = paymentModal.getBoundingClientRect();
+      if (
+        e.clientX < dialogDimensions.left ||
+        e.clientX > dialogDimensions.right ||
+        e.clientY < dialogDimensions.top ||
+        e.clientY > dialogDimensions.bottom
+      ) {
         closePaymentModal();
       }
     });
@@ -1054,7 +1060,7 @@
     // Close modals on Escape key press (A11y/UX fix)
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
-        if (paymentModal.classList.contains('active')) closePaymentModal();
+        if (paymentModal.open) closePaymentModal();
         if (navLinks.classList.contains('open')) toggleMenu(false);
       }
     });

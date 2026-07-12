@@ -2425,9 +2425,9 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 8px;
   }
 
-  /* Bulletproof spacing for older mobile browsers */
-  .mobile-nav-cta .btn:first-child {
-    margin-bottom: 20px;
+  /* Brute force spacing to guarantee it applies */
+  .mobile-nav-cta .btn-outline-primary {
+    margin-bottom: 20px !important;
   }
 
   .nav-overlay {

@@ -2411,10 +2411,10 @@ h1, h2, h3, h4, h5, h6 {
   .mobile-nav-cta {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    margin-top: 12px;
-    padding: 14px 14px 0;
-    border-top: 1px solid var(--gray-200);
+    gap: 16px;
+    margin-top: 16px;
+    padding: 20px 0 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
   }
 
   .mobile-nav-cta .btn {

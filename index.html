@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <link rel="stylesheet" href="./assets/css/styles.css?v=3" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="./assets/images/logo.png" />
@@ -1029,6 +1029,12 @@
 
     function openPaymentModal(e) {
       if (e) e.preventDefault();
+      
+      // Close mobile menu if it's open
+      if (navLinks.classList.contains('open')) {
+        toggleMenu(false);
+      }
+      
       paymentModal.classList.add('active');
       document.body.style.overflow = 'hidden';
     }

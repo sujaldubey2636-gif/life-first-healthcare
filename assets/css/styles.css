@@ -2696,21 +2696,26 @@ h1, h2, h3, h4, h5, h6 {
 /* Responsive adjustments for Payment Modal and Booking Card */
 @media (max-width: 480px) {
   .modal-overlay {
-    padding: 0; /* No outer padding — make it full-screen */
-    align-items: stretch;
+    padding: 0;
+    align-items: flex-end; /* Push card to bottom */
+    justify-content: stretch;
   }
   
   .payment-modal-card {
     padding: var(--sp-6) var(--sp-5);
-    border-radius: var(--r-2xl) var(--r-2xl) 0 0; /* Rounded top only */
-    max-width: 100%;
-    margin: auto 0 0 0; /* Pin to bottom like a mobile sheet */
-    max-height: 95vh;
+    border-radius: 20px 20px 0 0; /* Rounded top only */
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important; /* No margin — flush to bottom and sides */
+    max-height: 92vh;
     overflow-y: auto;
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(100%) !important; /* Start off-screen at bottom */
+    transition: transform 0.4s cubic-bezier(0.32, 0.72, 0, 1) !important;
   }
 
   .modal-overlay.active .payment-modal-card {
-    transform: translateY(0) scale(1);
+    transform: translateY(0) !important; /* Slide up into view */
   }
 
   .payment-modal-header {

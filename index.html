@@ -875,10 +875,10 @@
     // Mobile dropdown
     document.querySelectorAll('.dropdown').forEach(dd => {
       dd.querySelector('.dropdown-toggle').addEventListener('click', e => {
-        if (window.innerWidth <= 768) {
-          e.preventDefault();
-          dd.classList.toggle('active');
-        }
+        // Removed innerWidth check because some high-DPI mobile devices or tablets
+        // in portrait mode can report widths > 768px while still displaying the mobile UI.
+        e.preventDefault();
+        dd.classList.toggle('active');
       });
     });
 

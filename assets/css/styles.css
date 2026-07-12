@@ -2593,7 +2593,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: var(--sp-6);
   max-width: 220px;
   box-shadow: inset var(--shadow-sm);
-  animation: qrPulse 2.5s infinite;
 }
 
 .qr-container img {

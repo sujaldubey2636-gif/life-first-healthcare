@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="./assets/css/styles.css?v=12" />
+  <link rel="stylesheet" href="./assets/css/styles.css?v=13" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="./assets/images/logo.png" />
@@ -849,8 +849,6 @@
       menuToggle.setAttribute('aria-expanded', isOpen);
       navLinks.classList.toggle('open', isOpen);
       navOverlay.classList.toggle('active', isOpen);
-      const isModalOpen = document.getElementById('paymentModal').classList.contains('active');
-      document.body.style.overflow = (isOpen || isModalOpen) ? 'hidden' : '';
     }
 
     menuToggle.addEventListener('click', () => toggleMenu());
@@ -1052,7 +1050,7 @@
       paymentModal.style.height = window.innerHeight + 'px';
       
       paymentModal.classList.add('active');
-      document.body.style.overflow = 'hidden';
+      // Removed overflow: hidden to prevent mobile layout thrashing
     }
 
     function closePaymentModal() {

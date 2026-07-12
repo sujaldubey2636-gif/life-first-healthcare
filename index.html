@@ -7,6 +7,11 @@
   <title>Life First Healthcare - Quality Home Healthcare, Delivered to Your Doorstep</title>
   <meta name="description" content="Life First Healthcare provides premium home healthcare services — elder care, nursing, physiotherapy, ICU at home, lab tests & more. 24/7 care with verified professionals." />
   <meta name="keywords" content="home healthcare, elder care, nursing care, physiotherapy at home, ICU at home, lab tests, medical equipment, dental care, nutrition, Life First Healthcare" />
+  
+  <!-- Anti-Cache Meta Tags to force mobile browser refresh -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
 
   <!-- Fonts (Plus Jakarta Sans + DM Sans) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,7 +22,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="./assets/css/styles.css?v=6" />
+  <link rel="stylesheet" href="./assets/css/styles.css?v=7" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="./assets/images/logo.png" />
@@ -789,8 +794,8 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- ===================== PAYMENT MODAL (Native Dialog) ===================== -->
-  <dialog id="paymentModal" class="payment-dialog">
+  <!-- ===================== PAYMENT MODAL ===================== -->
+  <div class="modal-overlay" id="paymentModal">
     <div class="payment-modal-card">
       <button type="button" class="modal-close-btn" onclick="closePaymentModal()" aria-label="Close modal">&times;</button>
       <div class="payment-modal-header">
@@ -826,7 +831,7 @@
         </div>
       </div>
     </div>
-  </dialog>
+  </div>
 
   <!-- ===================== JAVASCRIPT ===================== -->
   <script>
@@ -1035,24 +1040,18 @@
         toggleMenu(false);
       }
       
-      paymentModal.showModal();
+      paymentModal.classList.add('active');
       document.body.style.overflow = 'hidden';
     }
 
     function closePaymentModal() {
-      paymentModal.close();
+      paymentModal.classList.remove('active');
       document.body.style.overflow = '';
     }
 
     // Close when clicking outside the dialog card
     paymentModal.addEventListener('click', (e) => {
-      const dialogDimensions = paymentModal.getBoundingClientRect();
-      if (
-        e.clientX < dialogDimensions.left ||
-        e.clientX > dialogDimensions.right ||
-        e.clientY < dialogDimensions.top ||
-        e.clientY > dialogDimensions.bottom
-      ) {
+      if (e.target === paymentModal) {
         closePaymentModal();
       }
     });
@@ -1060,7 +1059,7 @@
     // Close modals on Escape key press (A11y/UX fix)
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
-        if (paymentModal.open) closePaymentModal();
+        if (paymentModal.classList.contains('active')) closePaymentModal();
         if (navLinks.classList.contains('open')) toggleMenu(false);
       }
     });

@@ -2697,54 +2697,128 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 480px) {
   .modal-overlay {
     padding: 0;
-    align-items: flex-end; /* Push card to bottom */
+    align-items: flex-end;
     justify-content: stretch;
   }
   
   .payment-modal-card {
-    padding: var(--sp-6) var(--sp-5);
-    border-radius: 20px 20px 0 0; /* Rounded top only */
+    padding: 20px 20px 24px;
+    border-radius: 20px 20px 0 0;
     max-width: 100% !important;
     width: 100% !important;
-    margin: 0 !important; /* No margin — flush to bottom and sides */
-    max-height: 92vh;
+    margin: 0 !important;
+    max-height: 90vh;
     overflow-y: auto;
     box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.2);
-    transform: translateY(100%) !important; /* Start off-screen at bottom */
+    transform: translateY(100%) !important;
     transition: transform 0.4s cubic-bezier(0.32, 0.72, 0, 1) !important;
   }
 
+  /* Drag handle indicator at top */
+  .payment-modal-card::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 4px;
+    background: var(--gray-300);
+    border-radius: 4px;
+  }
+
   .modal-overlay.active .payment-modal-card {
-    transform: translateY(0) !important; /* Slide up into view */
+    transform: translateY(0) !important;
+  }
+
+  .modal-close-btn {
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
   }
 
   .payment-modal-header {
-    margin-bottom: var(--sp-4);
-    padding-bottom: var(--sp-3);
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    padding-top: 8px;
   }
 
   .payment-modal-header i {
-    font-size: 1.8rem !important;
-    margin-bottom: 8px !important;
+    font-size: 1.5rem !important;
+    margin-bottom: 6px !important;
   }
 
   .payment-modal-header h3 {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
+    margin-bottom: 2px;
   }
 
   .payment-modal-header p {
-    font-size: 0.8rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
   }
 
   .qr-container {
-    max-width: 170px;
-    padding: 10px;
-    margin-bottom: var(--sp-4);
+    max-width: 150px;
+    padding: 8px;
+    margin-bottom: 12px;
+    border-width: 1.5px;
+  }
+
+  /* UPI ID box — force horizontal layout */
+  .upi-id-box {
+    flex-direction: row !important;
+    align-items: center !important;
+    padding: 8px 10px !important;
+    gap: 8px !important;
+    margin-bottom: 10px;
+  }
+
+  .upi-text-wrap {
+    flex-direction: row !important;
+    align-items: center;
+    gap: 6px;
+    min-width: 0;
+    flex: 1;
+  }
+
+  .upi-id-box .label {
+    font-size: 0.6rem;
+    white-space: nowrap;
+  }
+
+  .upi-id-box .value {
+    font-size: 0.7rem !important;
+    white-space: nowrap !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: normal !important;
+  }
+
+  .upi-id-box .copy-btn {
+    padding: 4px 8px;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
 
   .payment-instruction {
-    font-size: 0.8rem;
-    margin-bottom: var(--sp-4);
+    font-size: 0.72rem;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    padding: 0 4px;
+  }
+
+  .secure-badges {
+    flex-direction: row !important;
+    gap: 12px !important;
+    padding-top: 10px;
+  }
+
+  .secure-badges span {
+    font-size: 0.72rem;
   }
 
   .booking-card {
@@ -2794,48 +2868,4 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@media (max-width: 400px) {
-  .upi-id-box {
-    flex-direction: column;
-    align-items: stretch;
-    gap: var(--sp-3);
-    text-align: center;
-    padding: var(--sp-3);
-  }
 
-  .upi-text-wrap {
-    align-items: center;
-    width: 100%;
-  }
-
-  .upi-id-box .value {
-    text-align: center;
-    font-size: 0.8rem;
-    white-space: normal;
-    word-break: break-all;
-    width: 100%;
-  }
-
-  .upi-id-box .copy-btn {
-    width: 100%;
-    justify-content: center;
-    padding: 8px var(--sp-4);
-  }
-
-  .secure-badges {
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-  }
-}
-
-@media (max-width: 350px) {
-  .payment-modal-card {
-    padding: var(--sp-4);
-  }
-  
-  .qr-container {
-    max-width: 150px;
-    padding: 8px;
-  }
-}

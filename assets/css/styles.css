@@ -2696,22 +2696,23 @@ h1, h2, h3, h4, h5, h6 {
 /* Responsive adjustments for Payment Modal and Booking Card */
 @media (max-width: 480px) {
   .modal-overlay {
-    padding: var(--sp-4);
+    padding: 16px;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
   }
   
   .payment-modal-card {
     padding: var(--sp-6) var(--sp-5);
     border-radius: var(--r-2xl);
-    max-width: 380px !important;
+    max-width: 360px !important;
     width: 100% !important;
-    margin: auto !important;
+    margin: 0 !important; /* Let flexbox center it, remove margin auto */
     max-height: 90vh;
     overflow-y: auto;
     box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
-    transform: translateY(20px) scale(0.95) !important;
-    transition: all 0.4s cubic-bezier(0.32, 0.72, 0, 1) !important;
+    transform: scale(0.95) !important; /* Removed translateY to fix spawning issues */
+    transition: all 0.3s ease !important;
   }
 
   .payment-modal-card::after {
@@ -2719,7 +2720,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .modal-overlay.active .payment-modal-card {
-    transform: translateY(0) scale(1) !important;
+    transform: scale(1) !important;
   }
 
   .modal-close-btn {

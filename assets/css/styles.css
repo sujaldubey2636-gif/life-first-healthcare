@@ -2479,17 +2479,18 @@ h1, h2, h3, h4, h5, h6 {
   .creator-credit { flex-direction: column; text-align: center; gap: 6px; }
 }
 
-/* === Payment Modal Styles === */
+/* === Payment Modal Styles (JS Absolute Positioning Fallback) === */
 .modal-overlay {
-  position: fixed;
-  top: 0;
+  position: absolute;
   left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100%;
+  /* top and height will be dynamically set by JS */
   background: rgba(15, 23, 42, 0.75);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 10000;
   opacity: 0;
   pointer-events: none;
@@ -2509,19 +2510,11 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.3);
   overflow-y: auto;
   max-height: 90vh;
-  height: max-content;
   padding: var(--sp-8);
   border: 1px solid rgba(0, 0, 0, 0.04);
+  position: relative;
   
-  /* Bulletproof Zero-Transform Centering */
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  
-  /* Animation (fade + slight scale, no translation) */
+  /* Animation (fade + slight scale) */
   opacity: 0;
   transform: scale(0.95);
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);

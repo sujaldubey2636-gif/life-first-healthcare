@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="./assets/css/styles.css?v=7" />
+  <link rel="stylesheet" href="./assets/css/styles.css?v=8" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="./assets/images/logo.png" />
@@ -1039,6 +1039,11 @@
       if (navLinks.classList.contains('open')) {
         toggleMenu(false);
       }
+      
+      // JS Absolute Positioning Fallback
+      const scrollY = window.scrollY || window.pageYOffset;
+      paymentModal.style.top = scrollY + 'px';
+      paymentModal.style.height = window.innerHeight + 'px';
       
       paymentModal.classList.add('active');
       document.body.style.overflow = 'hidden';

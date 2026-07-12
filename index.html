@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="./assets/css/styles.css?v=10" />
+  <link rel="stylesheet" href="./assets/css/styles.css?v=11" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="./assets/images/logo.png" />
@@ -883,7 +883,11 @@
     });
 
     // === Performance Optimized Scroll (60fps) ===
-    const sections = document.querySelectorAll('section[id]');
+    const sections = Array.from(document.querySelectorAll('section[id]')).map(s => ({
+      id: s.id,
+      el: s
+    }));
+    const navLinksArr = sections.map(s => document.querySelector(`.nav-links a[href="#${s.id}"]`));
     const heroBg = document.querySelector('.hero-bg');
     let scrollTicking = false;
 
@@ -895,18 +899,20 @@
           header.classList.toggle('scrolled', y > 40);
           backToTop.classList.toggle('visible', y > 500);
 
-          // 2. Hero Parallax Effect
-          if (heroBg && y < window.innerHeight) {
+          // 2. Hero Parallax Effect (Disabled on mobile to save GPU)
+          if (heroBg && window.innerWidth > 768 && y < window.innerHeight) {
             heroBg.style.transform = `translate3d(0, ${y * 0.3}px, 0)`;
           }
 
-          // 3. Active Nav Highlighting
+          // 3. Active Nav Highlighting (Cached DOM lookups)
           const navY = y + 120;
-          sections.forEach(s => {
+          for (let i = 0; i < sections.length; i++) {
+            const s = sections[i].el;
             const match = navY >= s.offsetTop && navY < s.offsetTop + s.offsetHeight;
-            const link = document.querySelector(`.nav-links a[href="#${s.id}"]`);
-            if (link) link.classList.toggle('active', match);
-          });
+            if (navLinksArr[i]) {
+              navLinksArr[i].classList.toggle('active', match);
+            }
+          }
 
           scrollTicking = false;
         });

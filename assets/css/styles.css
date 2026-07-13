@@ -2450,13 +2450,26 @@ h1, h2, h3, h4, h5, h6 {
   .hero-stats-bar { flex-direction: column; gap: var(--sp-4); align-items: center; }
 
   .services-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  
+  /* Drastically compact the footer for all mobile and tablet screens */
+  .footer { padding-top: var(--sp-8); }
+  .footer-grid { grid-template-columns: 1fr; gap: var(--sp-5); padding-bottom: var(--sp-6); }
+  .footer-brand img { margin-bottom: var(--sp-2); height: 60px; }
+  .footer-brand p { margin-bottom: var(--sp-2); font-size: 0.85rem; line-height: 1.4; }
+  .footer-brand .tagline { margin-bottom: var(--sp-3); font-size: 0.8rem; }
+  .footer h4 { margin-bottom: var(--sp-2); padding-bottom: 6px; font-size: 0.85rem; }
+  .footer-links li { margin-bottom: 2px; }
+  .footer-links a { font-size: 0.85rem; }
+  .footer-contact-item { margin-bottom: 8px; font-size: 0.85rem; }
+  .footer-bottom { flex-direction: column; text-align: center; padding-top: var(--sp-4); gap: 12px; }
+
+  .about-checklist { grid-template-columns: 1fr; }
   .why-grid { grid-template-columns: 1fr; }
   .steps-grid { grid-template-columns: 1fr 1fr; }
   .steps-grid::before { display: none; }
   .testimonials-grid { grid-template-columns: 1fr; }
-  .form-row { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr; gap: var(--sp-8); }
-  .footer-bottom { flex-direction: column; text-align: center; }
+  
   .about-checklist { grid-template-columns: 1fr; }
   .trust-grid { gap: var(--sp-4); }
   .trust-item { flex: 1; min-width: 160px; }

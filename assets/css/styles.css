@@ -2454,7 +2454,11 @@ h1, h2, h3, h4, h5, h6 {
   
   /* Drastically compact the footer for all mobile and tablet screens */
   .footer { padding-top: var(--sp-8); }
-  .footer-grid { grid-template-columns: 1fr; gap: var(--sp-5); padding-bottom: var(--sp-6); }
+  
+  /* Make Quick Links & Our Services parallel (side-by-side) */
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: var(--sp-5); padding-bottom: var(--sp-6); }
+  .footer-brand, .footer-grid > div:last-child { grid-column: 1 / -1; } /* Logo and Contact Info take full width */
+  
   .footer-brand img { margin-bottom: var(--sp-2); height: 60px; }
   .footer-brand p { margin-bottom: var(--sp-2); font-size: 0.85rem; line-height: 1.4; }
   .footer-brand .tagline { margin-bottom: var(--sp-3); font-size: 0.8rem; }

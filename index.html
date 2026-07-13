@@ -26,6 +26,25 @@
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="./assets/images/logo.png?v=2" />
+
+  <!-- Hardcoded Mobile Fixes (Bypasses CSS Cache) -->
+  <style>
+    @media (max-width: 480px) {
+      .whatsapp-float { 
+        bottom: max(24px, env(safe-area-inset-bottom)) !important; 
+        right: 20px !important; 
+      }
+      .whatsapp-btn { width: 56px !important; height: 56px !important; font-size: 1.6rem !important; }
+      
+      .back-to-top { 
+        bottom: calc(max(24px, env(safe-area-inset-bottom)) + 72px) !important; 
+        right: 28px !important; 
+        width: 40px !important; 
+        height: 40px !important; 
+        font-size: 0.85rem !important; 
+      }
+    }
+  </style>
 </head>
 <body>
 

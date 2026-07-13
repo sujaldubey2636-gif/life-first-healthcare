@@ -2486,7 +2486,17 @@ h1, h2, h3, h4, h5, h6 {
 
   /* Scale down about collage */
   .about-img-main { height: 320px; }
-  .about-img-float { display: none; }
+  .about-img-float { 
+    display: block; 
+    width: 100px; 
+    bottom: 50%; 
+    right: 50%; 
+    transform: translate(50%, 50%); 
+    border-width: 4px; 
+    border-radius: var(--r-2xl);
+    z-index: 2;
+  }
+  .about-img-float img { height: 100px; }
   .about-experience-badge { left: 50%; top: -20px; transform: translateX(-50%); padding: 8px 16px; width: max-content; }
   .about-experience-badge .num { font-size: var(--text-lg); }
   .about-experience-badge .txt { font-size: 0.7rem; }

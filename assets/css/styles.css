@@ -2426,7 +2426,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   /* Brute force spacing to guarantee it applies */
-  .mobile-nav-cta .btn-outline-primary {
+  .mobile-nav-cta .btn-accent {
     margin-bottom: 20px !important;
   }
 

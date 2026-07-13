@@ -2488,9 +2488,9 @@ h1, h2, h3, h4, h5, h6 {
   .about-img-main { height: 320px; }
   .about-img-float { width: 110px; bottom: 10px; right: 10px; border-width: 3px; }
   .about-img-float img { height: 110px; }
-  .about-experience-badge { left: 10px; top: -10px; padding: 6px 10px; }
+  .about-experience-badge { left: 50%; top: -20px; transform: translateX(-50%); padding: 8px 16px; width: max-content; }
   .about-experience-badge .num { font-size: var(--text-lg); }
-  .about-experience-badge .txt { font-size: 0.65rem; }
+  .about-experience-badge .txt { font-size: 0.7rem; }
 
   /* Scale down card padding to give fields more room */
   .service-card-body { padding: var(--sp-5); }

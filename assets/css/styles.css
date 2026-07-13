@@ -2461,14 +2461,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 480px) {
-  .section { padding: var(--sp-12) 0; } /* Reduce section padding to 48px on mobile */
+  /* Premium Typography & Readability Polish */
+  body { font-size: 1.05rem; line-height: 1.65; }
+  .section { padding: var(--sp-12) 0; } 
   
-  .section-title { font-size: var(--text-2xl) !important; } /* Smaller headings on mobile */
-  .section-desc { font-size: var(--text-sm); } /* Smaller description text */
+  .section-title { font-size: 2rem !important; line-height: 1.2; letter-spacing: -0.02em; margin-bottom: var(--sp-3); }
+  .section-desc { font-size: 1rem; line-height: 1.6; color: var(--gray-600); max-width: 95%; margin-inline: auto; }
+  
+  /* Premium Soft Shadows for Mobile Cards */
+  .service-card, .why-card, .testimonial-card, .step-card, .contact-card {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+    border: 1px solid rgba(0,0,0,0.02);
+    border-radius: var(--r-2xl);
+  }
   
   .hero { min-height: 75vh; }
-  .hero h1 { font-size: 2.25rem !important; }
-  .hero-subtitle { font-size: var(--text-base); margin-bottom: var(--sp-6); }
+  .hero h1 { font-size: 2.3rem !important; line-height: 1.15; letter-spacing: -0.03em; }
+  .hero-subtitle { font-size: 1.05rem; line-height: 1.5; margin-bottom: var(--sp-6); opacity: 0.95; max-width: 95%; margin-inline: auto; }
   .hero-ekg { bottom: 20px; }
   
   .hero-cta { flex-direction: column; gap: var(--sp-3); width: 100%; }

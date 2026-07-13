@@ -2554,21 +2554,19 @@ h1, h2, h3, h4, h5, h6 {
   .footer-bottom-links { justify-content: center; flex-wrap: wrap; gap: var(--sp-3) var(--sp-4); }
   .creator-credit { flex-direction: column; text-align: center; gap: 6px; }
 
-  /* Floating buttons — stack vertically on mobile to prevent overlap */
+  /* Floating buttons — compact side-by-side layout on mobile */
   .whatsapp-float { 
-    bottom: max(24px, env(safe-area-inset-bottom)); 
-    right: 20px; 
+    bottom: max(16px, env(safe-area-inset-bottom)); 
+    right: 16px; 
   }
-  .whatsapp-btn { width: 56px; height: 56px; font-size: 1.6rem; }
+  .whatsapp-btn { width: 48px; height: 48px; font-size: 1.4rem; }
   
   .back-to-top { 
-    /* Stack above WhatsApp button: whatsapp height (56px) + gap (16px) = 72px */
-    bottom: calc(max(24px, env(safe-area-inset-bottom)) + 72px); 
-    /* Center it relative to whatsapp button: 20px (right) + (56-40)/2 = 28px */
-    right: 28px; 
-    width: 40px; 
-    height: 40px; 
-    font-size: 0.85rem; 
+    bottom: calc(max(16px, env(safe-area-inset-bottom)) + 6px); 
+    right: 76px; 
+    width: 36px; 
+    height: 36px; 
+    font-size: 0.75rem; 
   }
 
   /* iPhone safe-area support */

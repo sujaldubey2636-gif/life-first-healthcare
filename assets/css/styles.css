@@ -2486,8 +2486,8 @@ h1, h2, h3, h4, h5, h6 {
 
   /* Scale down about collage */
   .about-img-main { height: 320px; }
-  .about-img-float { width: 130px; bottom: -15px; right: 10px; }
-  .about-img-float img { height: 130px; }
+  .about-img-float { width: 110px; bottom: 10px; right: 10px; border-width: 3px; }
+  .about-img-float img { height: 110px; }
   .about-experience-badge { left: 10px; top: -10px; padding: 6px 10px; }
   .about-experience-badge .num { font-size: var(--text-lg); }
   .about-experience-badge .txt { font-size: 0.65rem; }

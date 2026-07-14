@@ -49,6 +49,7 @@
   --font-body: 'DM Sans', -apple-system, sans-serif;
 
   /* Fluid Sizing */
+  --text-2xs: 0.7rem;
   --text-xs: 0.8rem;
   --text-sm: 0.95rem;
   --text-base: 1.05rem;
@@ -2446,9 +2447,6 @@ h1, h2, h3, h4, h5, h6 {
 
   .nav-overlay.active { opacity: 1; visibility: visible; }
 
-  .hero { min-height: 85vh; }
-  .hero-stats-bar { flex-direction: column; gap: var(--sp-4); align-items: center; }
-
   .services-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
   
@@ -2480,9 +2478,8 @@ h1, h2, h3, h4, h5, h6 {
   .steps-grid::before { display: none; }
   .testimonials-grid { grid-template-columns: 1fr; }
   
-  .about-checklist { grid-template-columns: 1fr; }
   .trust-grid { gap: var(--sp-4); }
-  .trust-item { flex: 1; min-width: 160px; }
+  .trust-item { flex: 1; }
   .cta-buttons { flex-direction: column; align-items: center; width: 100%; }
   .cta-buttons .btn { width: 100%; text-align: center; justify-content: center; }
 
@@ -2516,6 +2513,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   .hero { min-height: 75vh; }
+  .hero-stats-bar { flex-direction: column; gap: var(--sp-4); align-items: center; }
   .hero h1 { font-size: 2.3rem !important; line-height: 1.15; letter-spacing: -0.03em; }
   .hero-subtitle { font-size: 1.05rem; line-height: 1.5; margin-bottom: var(--sp-6); opacity: 0.95; max-width: 95%; margin-inline: auto; }
   .hero-ekg { bottom: 20px; }

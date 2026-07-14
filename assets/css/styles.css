@@ -2499,11 +2499,14 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 480px) {
   /* Premium Typography & Readability Polish */
-  body { font-size: 1.05rem; line-height: 1.65; }
-  .section { padding: var(--sp-12) 0; } 
+  body { font-size: 1rem; line-height: 1.6; }
+  .section { padding: var(--sp-10) 0; }
   
-  .section-title { font-size: 2rem !important; line-height: 1.2; letter-spacing: -0.02em; margin-bottom: var(--sp-3); }
-  .section-desc { font-size: 1rem; line-height: 1.6; color: var(--gray-600); max-width: 95%; margin-inline: auto; }
+  /* Section headers — tighter and more impactful */
+  .section-label { font-size: 0.78rem; padding: 5px 14px; margin-bottom: var(--sp-3); }
+  .section-title { font-size: 1.85rem !important; line-height: 1.15; letter-spacing: -0.025em; margin-bottom: var(--sp-2); }
+  .section-desc { font-size: 0.95rem; line-height: 1.55; color: var(--gray-600); max-width: 95%; margin-inline: auto; }
+  .section-header { margin-bottom: var(--sp-8); }
   
   /* Premium Soft Shadows for Mobile Cards */
   .service-card, .why-card, .testimonial-card, .step-card, .contact-card {
@@ -2512,24 +2515,55 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: var(--r-2xl);
   }
   
-  .hero { min-height: 75vh; }
-  .hero-stats-bar { flex-direction: column; gap: var(--sp-4); align-items: center; }
-  .hero h1 { font-size: 2.3rem !important; line-height: 1.15; letter-spacing: -0.03em; }
+  .hero { min-height: 72vh; }
+  .hero-stats-bar { 
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 0;
+    padding-top: var(--sp-6);
+    align-items: center;
+  }
+  /* Divider between hero stats */
+  .hero-stat + .hero-stat { border-left: 1px solid rgba(255,255,255,0.12); padding-left: var(--sp-4); }
+  
+  .hero h1 { font-size: 2.1rem !important; line-height: 1.12; letter-spacing: -0.03em; }
   .hero-subtitle { font-size: 1.05rem; line-height: 1.5; margin-bottom: var(--sp-6); opacity: 0.95; max-width: 95%; margin-inline: auto; }
   .hero-ekg { bottom: 20px; }
   
   .hero-cta { flex-direction: column; gap: var(--sp-3); width: 100%; }
   .hero-cta .btn { width: 100%; text-align: center; justify-content: center; }
 
-  .steps-grid { grid-template-columns: 1fr; }
-  .step-card { padding: var(--sp-6) var(--sp-4); }
+  /* Steps grid — single column on tiny phones */
+  .steps-grid { grid-template-columns: 1fr; gap: var(--sp-3); }
+  .step-card { 
+    padding: var(--sp-5) var(--sp-5); 
+    display: flex; 
+    align-items: flex-start; 
+    gap: var(--sp-4);
+    text-align: left;
+  }
+  .step-num { 
+    font-size: 1.8rem; 
+    min-width: 48px;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+  .step-card h3 { font-size: 1rem; margin-bottom: var(--sp-1); }
+  .step-card p { font-size: 0.88rem; line-height: 1.5; }
 
-  /* 2x2 Trust Strip Layout instead of single column stack */
+  /* Trust strip — 2x2 compact grid */
   .trust-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-3); }
-  .trust-item { min-width: auto; padding: var(--sp-3) var(--sp-4); gap: var(--sp-3); }
-  .trust-item-icon { width: 36px; height: 36px; font-size: 0.8rem; }
-  .trust-item-value { font-size: var(--text-base); }
-  .trust-item-label { font-size: var(--text-2xs); }
+  .trust-item { 
+    min-width: auto; 
+    padding: var(--sp-4);
+    gap: var(--sp-3);
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: var(--r-xl);
+  }
+  .trust-item-icon { width: 38px; height: 38px; font-size: 0.9rem; border-radius: var(--r-md); }
+  .trust-item-value { font-size: 1.25rem; margin-top: var(--sp-1); }
+  .trust-item-label { font-size: 0.7rem; opacity: 0.75; }
 
   /* Scale down about collage */
   .about-img-main { height: 320px; }
@@ -2552,16 +2586,28 @@ h1, h2, h3, h4, h5, h6 {
   .service-card-img { height: 180px; }
 
   /* Hero stat items — prevent crowding */
-  .hero-stat { gap: var(--sp-2); }
-  .hero-stat-icon { width: 38px; height: 38px; font-size: 0.9rem; }
-  .hero-stat-num { font-size: var(--text-lg); }
-  .hero-stat-label { font-size: 0.7rem; }
+  .hero-stat { gap: var(--sp-2); flex-direction: column; align-items: center; text-align: center; }
+  .hero-stat-icon { width: 36px; height: 36px; font-size: 0.85rem; }
+  .hero-stat-num { font-size: 1.1rem; }
+  .hero-stat-label { font-size: 0.65rem; }
 
-  /* Scale down card padding to give fields more room */
-  .service-card-body { padding: var(--sp-5); }
-  .why-card { padding: var(--sp-6) var(--sp-4); }
-  .testimonial-card { padding: var(--sp-6); }
-  .contact-form-box { padding: var(--sp-6) var(--sp-4); }
+  /* Why cards — horizontal icon+title for more density */
+  .why-card { padding: var(--sp-5) var(--sp-4); border-radius: var(--r-2xl); }
+  .why-card-icon { width: 40px; height: 40px; font-size: 1rem; margin-bottom: var(--sp-3); }
+  .why-card h3 { font-size: 1rem; margin-bottom: var(--sp-2); }
+  .why-card p { font-size: 0.9rem; line-height: 1.55; }
+
+  /* Scale down card padding */
+  .service-card-body { padding: var(--sp-4) var(--sp-4); }
+  .service-card-body h3 { font-size: 1rem; margin-bottom: var(--sp-2); }
+  .service-card-body p { font-size: 0.88rem; line-height: 1.55; }
+  
+  .testimonial-card { padding: var(--sp-5); border-radius: var(--r-2xl); }
+  .testimonial-text { font-size: 0.9rem; line-height: 1.65; }
+  .testimonial-name { font-size: 0.9rem; }
+  
+  .contact-form-box { padding: var(--sp-5) var(--sp-4); border-radius: var(--r-2xl); }
+  .contact-form-box h3 { font-size: 1.25rem; }
 
   /* Prevent iOS zoom-on-focus by keeping inputs at 16px */
   .form-floating .form-control { font-size: 16px; }

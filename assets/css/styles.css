@@ -2608,12 +2608,10 @@ h1, h2, h3, h4, h5, h6 {
   .footer-contact-item { word-break: break-word; }
 }
 
-/* === Payment Modal Styles (JS Absolute Positioning Fallback) === */
+/* === Payment Modal Styles === */
 .modal-overlay {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  /* top and height will be dynamically set by JS */
+  position: fixed;
+  inset: 0; /* shorthand for top/right/bottom/left 0 */
   background: rgba(15, 23, 42, 0.75);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);

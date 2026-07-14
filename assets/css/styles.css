@@ -2459,7 +2459,13 @@ h1, h2, h3, h4, h5, h6 {
   .footer-grid { grid-template-columns: 1fr 1fr; gap: var(--sp-5); padding-bottom: var(--sp-6); }
   .footer-brand, .footer-grid > div:last-child { grid-column: 1 / -1; } /* Logo and Contact Info take full width */
   
-  .footer-brand img { margin-bottom: var(--sp-2); height: 60px; }
+  .footer-brand img { 
+    margin-bottom: var(--sp-2); 
+    height: 64px; 
+    width: auto; 
+    max-width: 160px; 
+    border-radius: var(--r-md);
+  }
   .footer-brand p { margin-bottom: var(--sp-2); font-size: 0.85rem; line-height: 1.4; }
   .footer-brand .tagline { margin-bottom: var(--sp-3); font-size: 0.8rem; }
   .footer h4 { margin-bottom: var(--sp-2); padding-bottom: 6px; font-size: 0.85rem; }
